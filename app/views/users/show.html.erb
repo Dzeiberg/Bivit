@@ -1,0 +1,22 @@
+<% provide(:title, @user.first_name + @user.last_name) %>
+<div class = "row-fluid">
+	<aside class="span4">
+		<section>
+			<h1>
+				<%= @user.first_name + " " + @user.last_name %>
+			</h1>
+		</section>
+		<section>
+			<%= render 'shared/stats' %>
+		</section>
+	</aside>
+	<div class = "span4">
+	  <% if @user.articles.any? %>
+	    <h3>Articles (<%= @user.articles.count %>)</h3>
+	    <ol class = "articles">
+	      <%= render @articles %>
+	    </ol>
+	    <%= will_paginate @articles %>
+	  <% end %>
+	</div>
+</div>

@@ -1,0 +1,44 @@
+<% provide(:title, 'Article') %>
+<p>
+  <strong>Title:</strong>
+  <%= @article.title %>
+</p>
+ 
+<p>
+  <strong>Author:</strong>
+  <%= @article.author %>
+</p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @article.content %>
+</p>
+ 
+<h2>Comments</h2>
+<% @article.comments.each do |comment| %>
+  <% @user = User.find_by_id(comment.user_id) %>
+  Comment
+  <p>
+    <strong>Commenter:</strong>
+    <%= @user.email %>
+  </p>
+  <p>
+    <strong>Comment:</strong>
+    <%= comment.body %>
+  </p>
+<% end %>
+ 
+<h2>Add a comment:</h2>
+<%= form_for([@article, @article.comments.build]) do |f| %>
+
+  <p>
+    <%= f.label :body %><br />
+    <%= f.text_area :body %>
+  </p>
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
+ 
+<%= link_to 'Edit Post', edit_article_path(@article) %> |
+<%= link_to 'Back to Posts', articles_path %>

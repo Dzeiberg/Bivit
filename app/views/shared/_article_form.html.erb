@@ -1,0 +1,17 @@
+<%= form_for(@article) do |g| %>
+  <%= render 'shared/error_messages', object: g.object %>
+  <h3> Post Article </h3>
+  <div class="field">
+    <%= g.text_area :title, :size => "5x2", placeholder: "Add title…" %>
+  </div>
+  <div class="field">
+    <%= g.text_area :author, :size => "5x2", placeholder: "Add author…" %>
+  </div>
+  <div class="field">
+    <%= g.text_area :content, placeholder: "Add content…" %>
+  </div>
+  <div class="field">
+    <%= g.text_area :teaser, :size => "5x10", placeholder: "Add teaser…" %>
+  </div>
+  <%= g.submit "Post", class: "btn btn-large btn-primary" %>
+<% end %>

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Mad Chatter</title>
+    <meta name="description" content="Mad Chatter">
+    <meta name="author" content="Andrew Havens">
+	
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+	<script src="js/swfobject.js"></script>
+	<script src="js/web_socket.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	
+    <!-- Le styles -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+	<link href="css/mad_chatter.css" rel="stylesheet">
+
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="img/favicon.ico">
+    <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/apple-touch-icon-114x114.png">
+</head>
+
+<body>
+	
+	<div id="upgrade_flash" class="container-fluid" style="display:none">
+		<h1>Mad Chatter</h1>
+		<p>Looks like you need to <a href="http://get.adobe.com/flashplayer" class="btn btn-primary">upgrade your flash player</a></p>
+	</div>
+
+	<div id="login_screen" class="container-fluid">
+		<div class="hero-unit">
+		<h1>Welcome to Mad&nbsp;Chatter!</h1>
+		<p>You are about to experience the best chat application evah!</p>
+		<form id="pick_a_username" class="well form-search">
+			<input id="username" type="text" placeholder="What is your name?">
+			<button id="join" class="btn">Join</button>
+		</form>
+		</div>
+	</div>
+
+	<div id="chat_wrapper" style="display:none">
+		
+		<div class="navbar navbar-fixed-top">
+			<div class="navbar-inner">
+				<div class="container-fluid">
+					<a class="brand" href="#">Mad Chatter</a>
+					<ul id="channel_tabs" class="nav"></ul>
+					<p id="users-nav" class="navbar-text pull-right hide">Who's Here?</p>
+				</div>
+			</div>
+		</div>
+
+		<div data-channel="lobby" class="channel container-fluid" style="display:none">
+			<a data-toggle="modal" href="#create_channel" class="btn btn-large" style="float:right">Create a Room</a>
+			<h2>Rooms</h2>
+			<ul id="channels"></ul>
+			<p class="create_room" style="display:none">
+				It doesn't look like there are any rooms here. 
+				Why don't you create one?
+			</p>
+		</div>
+		
+		<div id="channel_template" class="channel container-fluid" style="display:none">
+			
+			<div class="users-list hide">
+				<ul class="users"></ul>
+			</div>
+			
+			<div class="messages container-fluid"></div>
+			
+			<div class="new_message well row-fluid">
+				<div class="span10">
+					<input type="text"></input>
+				</div>
+				<div class="btn-toolbar span2">
+			        <div class="share btn-group">
+						<a class="send_message btn" href="#">Share</a>
+						<a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
+							<span class="caret"></span>
+						</a>
+						<ul class="dropdown-menu bottom-up">
+							<li><a data-toggle="modal" href="#share_photo">Photo</a></li>
+							<li><a data-toggle="modal" href="#share_file">Document</a></li>
+							<li><a data-toggle="modal" href="#share_code">Code Sample</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div id="share_photo" class="modal fade hide">
+			<div class="modal-header">
+				<a class="close" data-dismiss="modal">×</a>
+				<h3>Share Photo</h3>
+			</div>
+			<div class="modal-body form-horizontal">
+				<div class="control-group">
+					<label class="control-label" for="upload">Upload File</label>
+					<div class="controls">
+						<input class="input-file" type="file" name="upload">
+						<span class="help-block">Doesn't Work Yet</span>
+					</div>
+				</div>
+				<div class="control-group">
+					<label class="control-label" for="url">Photo URL</label>
+					<div class="controls">
+						<input type="text" class="input-xlarge" name="url">
+					</div>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<a href="#" class="btn btn-primary">Share</a>
+				<a href="#" class="btn" data-dismiss="modal">Cancel</a>
+			</div>
+		</div>
+		
+		<div id="share_file" class="modal fade hide">
+			<div class="modal-header">
+				<a class="close" data-dismiss="modal">×</a>
+				<h3>Share Document</h3>
+			</div>
+			<div class="modal-body form-horizontal">
+				<div class="control-group">
+					<label class="control-label" for="upload">Upload File</label>
+					<div class="controls">
+						<input class="input-file" type="file" name="upload">
+						<span class="help-block">Doesn't Work Yet</span>
+					</div>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<a href="#" class="btn btn-primary">Share</a>
+				<a href="#" class="btn" data-dismiss="modal">Cancel</a>
+			</div>
+		</div>
+		
+		
+		<div id="share_code" class="modal fade hide">
+		  <div class="modal-header">
+		    <a class="close" data-dismiss="modal">×</a>
+		    <h3>Share Code Sample</h3>
+		  </div>
+		  <div class="modal-body">
+			<textarea name="code" rows="10"></textarea>
+		  </div>
+		  <div class="modal-footer">
+		    <a href="#" class="btn btn-primary">Share</a>
+		    <a href="#" class="btn" data-dismiss="modal">Cancel</a>
+		  </div>
+		</div>
+		
+		<div id="create_channel" class="modal fade hide">
+			<div class="modal-header">
+				<a class="close" data-dismiss="modal">×</a>
+				<h3>Create New Room</h3>
+			</div>
+			<div class="modal-body form-horizontal">
+				<div class="control-group">
+					<label class="control-label" for="name">Room Name</label>
+					<div class="controls">
+						<input type="text" class="input-xlarge" name="name">
+					</div>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<a href="#" class="btn btn-primary">Create</a>
+				<a href="#" class="btn" data-dismiss="modal">Cancel</a>
+			</div>
+		</div>
+		
+	</div>
+	
+    <div id="disconnected" class="modal fade hide">
+        <div class="modal-header">
+            <a class="close" data-dismiss="modal">×</a>
+            <h3>Disconnected</h3>
+        </div>
+        <div class="modal-body">
+            <p>Looks like you've been disconnected from the server. We'll try to reconnect you.</p>
+        </div>
+        <div class="modal-footer">
+            <a href="#" class="btn btn-primary">Okay</a>
+            <a href="#" class="btn" data-dismiss="modal">Cancel</a>
+        </div>
+    </div>
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+	<script src="js/bootstrap.min.js"></script>
+	
+	<!-- Mad Chatter -->
+	<script src='js/mad_chatter.js'></script>
+	<script src='js/mad_chatter_actions.js'></script>
+	<script src='js/mad_chatter_config.js'></script>
+	<script>
+		if (!window.WebSocket && swfobject.getFlashPlayerVersion().major < 10) {
+			$('#login_screen').hide();
+			$('#upgrade_flash').show();
+		} else {
+			MadChatter.init(mad_chatter_config);
+		}
+	</script>
+</body>
+</html>

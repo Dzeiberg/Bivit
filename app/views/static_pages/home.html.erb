@@ -1,0 +1,27 @@
+<% provide('Home') %>
+<% if signed_in? %>
+<div class="row-fluid">
+    <div class="span3">
+      <section>
+        <%= render 'shared/user_info' %>
+      </section>
+      <section>
+        <%= render 'shared/stats' %>
+      </section>
+      <section>
+	<p> bio info </p>
+      </section>
+    </div>
+    <div class="span3">
+      <section>
+        <%= render 'shared/article_form' %>
+      </section>
+    </div>
+<% else %>
+  <div class="center hero-unit">
+    <h1>Welcome Basecamp Management</h1>
+
+    <%= link_to "Sign up now!", signup_path, 
+                                class: "btn btn-large btn-primary" %>
+  </div>
+<% end %> 

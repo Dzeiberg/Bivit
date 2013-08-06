@@ -1,0 +1,12 @@
+<% provide(:title, 'All Articles') %>
+<h1>All Articles</h1>
+
+<ul class = "articles" >
+  <% @articles.each do |article| %>
+      <tr>
+        <td><%= article.content %></td>
+	<td><%= article.user_id %></td>
+	<td><%= link_to 'Show', article %></td>
+	<td><%= link_to 'Edit', edit_article_path(article) %></td>
+	</tr>
+	<%end%>
