@@ -1,18 +1,27 @@
 <% if signed_in? %>
-<div class="row-fluid">
-    <div class="span6">
-      <section>
-        <%= render 'shared/user_info' %>
-      </section>
-      <section>
-        <%= render 'shared/stats' %>
-      </section>
-    </div>
-    <div class="span6">
-      <section>
-        <%= render 'shared/article_form' %>
-      </section>
-    </div>
+<div id="main">
+<%=render 'shared/user-top' %>
+<%=render 'shared/home-top' %>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <% else %>
 <div class="bg"></div>
 

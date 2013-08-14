@@ -1,4 +1,7 @@
 RsgLinkedinGem::Application.routes.draw do
+  resources :notifications
+
+
   require 'faye'
   Faye::WebSocket.load_adapter('thin')
   # mount Faye::RackAdapter.new(:timeout => 25), at: '/faye'
