@@ -2,16 +2,16 @@
   <%= render 'shared/error_messages', object: g.object %>
   <h3> Post Article </h3>
   <div class="field">
-    <%= g.text_area :title, :size => "5x2", placeholder: "Add title…" %>
+    <%= g.text_area :headline, :size => "5x2", placeholder: "Add headline…" %>
   </div>
   <div class="field">
-    <%= g.text_area :author, :size => "5x2", placeholder: "Add author…" %>
+    <%= g.text_area :content, :size => "5x2", placeholder: "Add content or link…" %>
   </div>
   <div class="field">
-    <%= g.text_area :content, placeholder: "Add content…" %>
+    <%= g.text_area :takeaway, :size => "5x2", placeholder: "Add takeaway…" %>
   </div>
   <div class="field">
-    <%= g.text_area :teaser, :size => "5x10", placeholder: "Add teaser…" %>
+    <%= g.text_area :tags, :size => "5x2", placeholder: "Add tags (seperated by space)…" %>
   </div>
   <%= g.submit "Post", class: "btn btn-large btn-primary" %>
 <% end %>

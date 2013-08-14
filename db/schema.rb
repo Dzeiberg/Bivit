@@ -14,10 +14,10 @@
 ActiveRecord::Schema.define(:version => 20130624181641) do
 
   create_table "articles", :force => true do |t|
-    t.string   "title"
-    t.string   "author"
+    t.string   "tags"
+    t.string   "headline"
     t.string   "content"
-    t.string   "teaser"
+    t.string   "takeaway"
     t.integer  "user_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false

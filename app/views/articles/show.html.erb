@@ -1,34 +1,39 @@
 <% provide(:title, 'Article') %>
 <p>
-  <strong>Title:</strong>
-  <%= @article.title %>
+  <strong>Headline:</strong>
+  <%= @article.headline %>
 </p>
  
 <p>
-  <strong>Author:</strong>
-  <%= @article.author %>
+  <strong>Content/Link:</strong>
+  <%= @article.content %>
 </p>
 
 <p>
-  <strong>Content:</strong>
-  <%= @article.content %>
+  <strong>Takeaway:</strong>
+  <%= @article.takeaway %>
+</p>
+
+<p>
+  <strong>Tags:</strong>
+  <%= @article.tags %>
 </p>
  
-<h2>Comments</h2>
+<h2>Takeaways</h2>
 <% @article.comments.each do |comment| %>
   <% @user = User.find_by_id(comment.user_id) %>
-  Comment
+  Takeaway
   <p>
-    <strong>Commenter:</strong>
+    <strong>User:</strong>
     <%= @user.email %>
   </p>
   <p>
-    <strong>Comment:</strong>
+    <strong>Takeaway:</strong>
     <%= comment.body %>
   </p>
 <% end %>
  
-<h2>Add a comment:</h2>
+<h2>Add a takeaway:</h2>
 <%= form_for([@article, @article.comments.build]) do |f| %>
 
   <p>

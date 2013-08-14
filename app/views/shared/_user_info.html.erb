@@ -1,11 +1,8 @@
 <a href="<%= user_path(current_user) %>">
 </a>
 <h2>
-  <%= current_user.email %>
+  <%= link_to current_user.first_name + " " + current_user.last_name, linkedin_profile_path %> 
 </h2>
-<span>
-  <%= link_to "view my profile", current_user %>
-</span>
 <span>
   <%= pluralize(current_user.articles.count, "article") %>
 </span>

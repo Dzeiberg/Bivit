@@ -1,7 +1,16 @@
 <div id="room">
-
+<div class="span3">
+<div class="members">
+  <% @messages.each do |message| %>
+    <p class="message">
+    <h3>Members</h3>
+      <li><%= message.author.username %></li>
+    </p>
+  <% end %>
+</div>
+</div>
+<div class= "span9">
 <h1 class="name"><%= @room.name %></h1>
-
 <div class="messages">
   <p id="previous_messages"><%= link_to '^ Show Previous Messages ^', '#' %></p>
   <% @messages.each do |message| %>
@@ -35,8 +44,7 @@
         <li><a href="#">Share File</a></li>
       </ul>
     </div> -->
-  </div>
 <% end %>
-
-<div class="members"></div>
 </div>
+
+

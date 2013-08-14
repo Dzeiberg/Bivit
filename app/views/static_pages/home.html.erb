@@ -1,27 +1,44 @@
-<% provide('Home') %>
 <% if signed_in? %>
 <div class="row-fluid">
-    <div class="span3">
+    <div class="span6">
       <section>
         <%= render 'shared/user_info' %>
       </section>
       <section>
         <%= render 'shared/stats' %>
       </section>
-      <section>
-	<p> bio info </p>
-      </section>
     </div>
-    <div class="span3">
+    <div class="span6">
       <section>
         <%= render 'shared/article_form' %>
       </section>
     </div>
 <% else %>
-  <div class="center hero-unit">
-    <h1>Welcome Basecamp Management</h1>
+<div class="bg"></div>
 
-    <%= link_to "Sign up now!", signup_path, 
-                                class: "btn btn-large btn-primary" %>
-  </div>
-<% end %> 
+<!-- BEGIN #home -->
+<div id="splash">
+	
+	<!-- BEGIN #header-top -->
+	
+	
+	<!-- END #header-top -->
+
+	<!-- BEGIN .block -->
+	<div class="block">
+	
+			<div class="home splash">
+
+			<h1 class="center shadow-light">Welcome to:</h1>
+
+			<a class="logo center marginbottom">Bivit</a>
+			
+			<h3 class="center shadow-light">Creating, sharing, and collaborating on <br/> information since 2013</h3>
+
+			</div>
+		
+	</div>
+	<!-- END .block -->	
+
+</div>
+<%end%>

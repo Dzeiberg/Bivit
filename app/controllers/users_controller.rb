@@ -27,7 +27,7 @@ class UsersController < ApplicationController
 		@user = User.new(params[:user])
 		if @user.save
 			sign_in @user
-			flash[:success] = "Welcome to Basecamp Management!"
+			flash[:success] = "Welcome to Bivit!"
 			redirect_to @user
 		else
 			render 'new'

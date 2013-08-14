@@ -9,13 +9,11 @@ RsgLinkedinGem::Application.routes.draw do
   match '/oauth_account' => "linkedin#oauth_account"
   match '/linkedin_oauth_url' => 'linkedin#generate_linkedin_oauth_url'
 
-  root :to => 'linkedin#index'
 resources :rooms do
     resources :messages
   end
 
-  root to: 'rooms#index'
-
+ root to: "static_pages#home"
 
   resources :users do
     member do
@@ -24,7 +22,6 @@ resources :rooms do
   end
 
   match '/home', to: "static_pages#home"
-
 
   match '/index', to: "linkedin#index"
 	
@@ -37,14 +34,6 @@ resources :rooms do
   match '/about', to: "static_pages#about"
 
   match '/contact', to: "static_pages#contact"
-
-  match '/signup', to: 'users#create'
-
-  match '/signin', to: 'sessions#new'
-
-  match '/signout', to: 'sessions#destroy', via: :delete
-
-  match '/edit', to: "layouts#edit"
 
   resources :articles do
     resources :comments
