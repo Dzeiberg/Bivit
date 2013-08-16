@@ -2,6 +2,7 @@ class StaticPagesController < ApplicationController
   def home
     if signed_in?
       @article = current_user.articles.build
+      @feed_items = Article.find(:all, :order => "id asc")
     end
   end
 

@@ -1,17 +1,32 @@
+<script type="text/javascript">
+$(document).ready(function(){
+  $("#popup .add").hide();
+  console.log("HIDDEN");
+});
+</script>
+
+
+<section id="popup" class="add">
+  <button class="close">[X]</button>
 <%= form_for(@article) do |g| %>
+  <div class="cf"></div>
   <%= render 'shared/error_messages', object: g.object %>
-  <h3> Post Article </h3>
-  <div class="field">
-    <%= g.text_area :headline, :size => "5x2", placeholder: "Add headline…" %>
-  </div>
-  <div class="field">
-    <%= g.text_area :content, :size => "5x2", placeholder: "Add content or link…" %>
-  </div>
-  <div class="field">
-    <%= g.text_area :takeaway, :size => "5x2", placeholder: "Add takeaway…" %>
-  </div>
-  <div class="field">
-    <%= g.text_area :tags, :size => "5x2", placeholder: "Add tags (seperated by space)…" %>
-  </div>
-  <%= g.submit "Post", class: "btn btn-large btn-primary" %>
+  <section id="write" class="left">
+    <header class="right top-round">Write a headline</header>
+    <div class="cf"></div>
+    <%= g.text_area :headline, placeholder: "Add headline…" %>
+    <div class="cf"></div>
+    
+    <header class="right top-round">Add a URL</header>
+    <%= g.text_area :content, placeholder: "Add content or link…" %>
+  </section>
+  
+  <section id="takeaway" class="left">
+    <header class="right top-round">Write a Takeaway</header>
+    <%= g.text_area :takeaway, placeholder: "Add takeaway…" %>
+    <header class="right top-round">Write a Takeaway</header>
+    <%= g.text_area :tags, placeholder: "Add tags (seperated by space)..." %>
+    <%= g.submit "Post", class: "btn-blue round medium right" %>
+  </section>
 <% end %>
+</section>

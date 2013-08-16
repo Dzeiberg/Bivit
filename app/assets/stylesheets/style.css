@@ -116,7 +116,7 @@ nav#main {background: #CEDEF5; padding-bottom: 13px;}
 */
 
 
-#main {background:  url('check-grey-texture-bg.png') repeat center center;}
+#main {background:  url('check-grey-texture-bg.png') repeat center center; height: 100% !important;}
 
 #top {width: 100%; clear:both;}
 
@@ -148,13 +148,14 @@ nav#main {background: #CEDEF5; padding-bottom: 13px;}
    column-count:         4;
    column-gap: 			12px;
    padding-top: 13px;
+   height: 100% !important;
 	}
 
 	/*
 	** ADD RESPONSIVE
 	*/
 
-#home article.article {height: auto !important; margin-bottom: 13px; padding: 13px; background: white; border: 1px solid #dedede;}
+#home article.article {height: auto !important; margin-bottom: 13px; padding: 13px; background: white; border: 1px solid #dedede; text-align: left; overflow: visible;}
 	#home article.article header {font-size: 22px; padding: 0 0 3px 0; margin: 0 0 3px 0; border-bottom: 1px solid #dedede;}
 	#home article.article aside {display: inline-block; width: 100%;}
 

@@ -5,6 +5,9 @@
 			<h1>
 				<%= @user.first_name + " " + @user.last_name %>
 			</h1>
+			<h2>
+					<%= @basic_profile.headline if @basic_profile%>
+			</h2>
 		</section>
 		<section>
 			<%= render 'shared/stats' %>
@@ -20,3 +23,153 @@
 	  <% end %>
 	</div>
 </div>
+
+<div id="profile">
+
+<div class="block">
+
+<div class="cf"></div><!-- clear -->
+	
+	<!-- BEGIN #profile #summary -->
+	<section id="summary" class="left">
+	
+		<aside class="photo left">
+			<% if @basic_profile %>
+				<img src="<%= @basic_profile.picture_url %>"/>
+			<% end %>
+		</aside>
+		
+		<aside class="info left">
+			<% if @basic_profile %>
+				<aside class="content">
+					<h1 class="left"><strong><%= @user.first_name + " " + @user.last_name %></strong></h1>
+					<br>
+					<h3 class="left"><strong><%= @basic_profile.headline if @basic_profile%></strong></h3>
+				</aside>
+			<% end %>
+		</aside>
+		
+		<!-- clear -->
+		<div class="cf"></div>
+		<% if @basic_profile.summary %>
+			<aside class="summary left">
+				<header>Summary</header>
+				<aside>
+					<%= @basic_profile.summary %>
+				</aside>
+			</aside>
+		<% end %>
+		
+		<!-- clear -->
+		<div class="cf"></div>
+		
+		<aside id="feed" class="left" style="width:48%; margin:5px;">
+			<% if @positions %>
+				<section class="biv">
+					<header>Experience</header>
+					<section class="feed">
+						<% @positions.each do |p| %>
+							<aside class="entry">
+								<u><%= p.company %></u> - <%= p.title %>
+							</aside>
+						<% end %>
+					</section>
+				</section>
+			<% end %>
+		</aside>
+		
+		<aside id="feed" class="left" style="width:48%; margin:5px;">
+			<% if @educations %>
+				<section class="articles">
+					<header>Education</header>
+					<section class="feed">
+						<% @educations.each do |e| %>
+							<aside class="entry">
+								<u><%= e.school_name %></u> : <%= e.start_date %> - <%= e.end_date %>
+							</aside>
+						<% end %>
+					</section>
+				</section>
+			<% end %>
+		</aside>
+
+	</section>
+	<!-- END #profile #summary -->
+	
+	<!-- BEGIN #profile #feed -->	
+	<section id="feed" class="left">
+
+		<section class="biv">
+			<header>Bivs</header>
+			<section class="feed">
+				<aside class="entry">
+					Biv Title
+				</aside>
+				<aside class="entry">
+					Biv Title
+				</aside>
+				<aside class="entry">
+					Biv Title
+				</aside>
+				<aside class="entry">
+					Biv Title
+				</aside>
+				<aside class="entry">
+					Biv Title
+				</aside>
+				<aside class="entry">
+					Biv Title
+				</aside>
+				<aside class="entry">
+					Biv Title
+				</aside>
+				<aside class="entry">
+					Biv Title
+				</aside>					
+			
+			</section>
+		</section>
+		
+		<section class="articles">
+			<header>Articles</header>
+			<section class="feed">
+				<aside class="entry">
+					Article
+				</aside>
+				<aside class="entry">
+					Article
+				</aside>
+				<aside class="entry">
+					Article
+				</aside>
+				<aside class="entry">
+					Article
+				</aside>
+				<aside class="entry">
+					Article
+				</aside>
+				<aside class="entry">
+					Article
+				</aside>
+				<aside class="entry">
+					Article
+				</aside>
+				<aside class="entry">
+					Article
+				</aside>					
+			
+			</section>
+		</section>
+	
+	
+	</section>
+	<!-- END #profile #feed -->
+
+<?php } ?>	
+	
+	<!-- clear -->
+	<div class="cf"></div>
+	
+</div><!-- END .block -->
+
+</div><!-- END #notifications -->

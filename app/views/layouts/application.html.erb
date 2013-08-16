@@ -13,9 +13,9 @@
     <%= render 'layouts/shim' %>
   </head>
   <body>
-  	<%= render 'layouts/header' %>
-
-      <%= yield %>
-    
+    <div id="wrapper">
+      <%= render 'layouts/header' %>
+        <%= yield %>
+    </div>
   </body>
 </html>

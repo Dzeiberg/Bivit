@@ -1,8 +1,6 @@
-<a href="<%= user_path(current_user) %>">
-</a>
-<h2>
-  <%= link_to current_user.first_name + " " + current_user.last_name, linkedin_profile_path %> 
-</h2>
-<span>
-  <%= pluralize(current_user.articles.count, "article") %>
-</span>
+<div class="block user-top">
+	<section id="username" class="left">
+		<h3 class="left">Hello, <strong><a href="<%= user_path(current_user) %>"><%= current_user.first_name + " " + current_user.last_name %></a></strong></h3>	
+	</section>
+</div>
+

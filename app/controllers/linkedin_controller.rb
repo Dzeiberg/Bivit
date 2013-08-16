@@ -9,7 +9,7 @@ class LinkedinController < ApplicationController
   }
 
   def index
-    unless LinkedinOauthSetting.find_by_user_id(current_user.id).nil?
+    unless LinkedinOauthSetting.find_by_user_id(params[:id]).nil?
       redirect_to "/linkedin_profile"
     end
   end
@@ -32,7 +32,7 @@ class LinkedinController < ApplicationController
   end
 
   def generate_linkedin_oauth_url
-    if LinkedinOauthSetting.find_by_user_id(current_user.id).nil?
+    if LinkedinOauthSetting.find_by_user_id(params[:id]).nil?
       client = LinkedIn::Client.new('iv6uehul4g5m', 'wtMfG2MbFerSULTC', @@config)
       request_token = client.request_token(:oauth_callback => "http://#{request.host}:#{request.port}/oauth_account")
       session[:rtoken] = request_token.token
@@ -46,7 +46,7 @@ class LinkedinController < ApplicationController
   private
 
   def get_client
-    linkedin_oauth_setting = LinkedinOauthSetting.find_by_user_id(current_user.id)
+    linkedin_oauth_setting = LinkedinOauthSetting.find_by_user_id(params[:id])
     client = LinkedIn::Client.new('iv6uehul4g5m', 'wtMfG2MbFerSULTC', @@config)
     client.authorize_from_access(linkedin_oauth_setting.atoken, linkedin_oauth_setting.asecret)
     client
@@ -54,7 +54,7 @@ class LinkedinController < ApplicationController
 
 
   def get_basic_profile
-    bprofile = BasicProfile.find_by_user_id(current_user.id)
+    bprofile = BasicProfile.find_by_user_id(params[:id])
     if bprofile.nil?
       client = get_client
       profile = client.profile(:fields => ["first-name", "last-name", "maiden-name", "formatted-name" ,:headline, :location, :industry, :summary, :specialties, "picture-url", "public-profile-url"])
@@ -71,7 +71,7 @@ class LinkedinController < ApplicationController
   end
 
   def get_full_profile
-    fprofile = FullProfile.find_by_user_id(current_user.id)
+    fprofile = FullProfile.find_by_user_id(params[:id])
     if fprofile.nil?
       client = get_client
       full_profile = client.profile(:fields => [:associations, :honors, :interests])
@@ -86,7 +86,7 @@ class LinkedinController < ApplicationController
   end
 
   def get_positions
-    positions = Position.find_all_by_full_profile_id(current_user.full_profile.id)
+    positions = Position.find_all_by_full_profile_id(find_by_user_id(params[:id]).full_profile.id)
     if positions.empty?
       client = get_client
       positions = client.profile(:fields => [:positions]).positions.all
@@ -118,7 +118,7 @@ class LinkedinController < ApplicationController
 
 
   def get_educations
-    educations = Education.find_all_by_full_profile_id(current_user.full_profile.id)
+    educations = Education.find_all_by_full_profile_id(find_by_user_id(params[:id]).full_profile.id)
     if educations.empty?
       client = get_client
       educations = client.profile(:fields => [:educations]).educations.all

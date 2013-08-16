@@ -1,0 +1,5 @@
+<% if @feed_items.any? %>
+	<section id="feed" style="height: 100% !important" class="row">
+    	<%= render partial: 'shared/feed_item', collection: @feed_items %>
+	</section>
+<% end %>

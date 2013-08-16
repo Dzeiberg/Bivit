@@ -58,6 +58,8 @@ resources :rooms do
 
   resources :comments
 
+  resources :users
+
   resources :articles, only: [:create, :destroy, :show, :index]
   
   resources :sessions, only: [:new, :create, :destroy]

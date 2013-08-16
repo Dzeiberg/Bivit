@@ -1,7 +1,9 @@
 class ArticlesController < ApplicationController
 
   def index
+    @article = current_user.articles.build
     @articles = Article.find :all, :order => 'id ASC'
+    @feed_items =  Article.find :all, :order => 'id ASC'
   end
 
   def new
@@ -14,8 +16,7 @@ class ArticlesController < ApplicationController
       flash[:success] = "Article created!"
       redirect_to root_url
     else
-      @afeed_items= []
-      render 'static_pages/home'
+      render 'articles/index'
     end
   end
 

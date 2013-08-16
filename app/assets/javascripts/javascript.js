@@ -33,7 +33,7 @@ $(function() {
 		});
 	
 		// Resize the Body on .ready and .resize events
-		$(document).ready(resized);
+		$(document).ready(function() {resized;});
 		$(window).resize(resized);
 		
 		function resized() {
@@ -49,9 +49,12 @@ $(function() {
 				$('.img-home').css({ 'height' : $(window).height() });
 			}	
 			
-			
+			bgresize;
 		}
 		
+		function bgresize() {
+			$('#wrapper div.bg').css({ 'height' : $(window).height() });
+		}
 		
 	
 	});	

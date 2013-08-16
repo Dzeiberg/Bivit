@@ -100,6 +100,10 @@ jQuery(document).ready(function() {
     Contact form
 */
 jQuery(document).ready(function() {
+
+    $("#popup.add").hide();
+    alert("hidden");
+
     $('.contact-form form').submit(function() {
 
         $('.contact-form form .nameLabel').html('Name');

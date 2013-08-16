@@ -1,12 +1,32 @@
 <% provide(:title, 'All Articles') %>
-<h1>All Articles</h1>
 
-<ul class = "articles" >
-  <% @articles.each do |article| %>
-      <tr>
-        <td><%= article.content %></td>
-	<td><%= article.user_id %></td>
-	<td><%= link_to 'Show', article %></td>
-	<td><%= link_to 'Edit', edit_article_path(article) %></td>
-	</tr>
-	<%end%>
+<div id="home">
+	<div class="block">
+		<section id="top" class="row left">
+
+			<section id="current" class="col6">
+				<!-- Industry Name -->
+				<h3 class="left">Articles</h3>
+				
+				<!-- Add Article -->
+				<button id="add-article" class="medium btn-purple round left">Add Article</button>
+				
+			</section>
+
+			<section id="industries" class="right col6">
+				<div class="slide-container">
+					<section class="slide">
+					</section>
+				</div>
+				<a id="industries_prev" href="#">Previous</a>
+				<a id="industries_next" href="#">Next</a>
+			</section>
+		</section>
+
+		<div class="cf"></div>
+
+		<%= render "shared/article_form" %>
+
+		<%= render "shared/feed" %>
+	</div>
+</div>

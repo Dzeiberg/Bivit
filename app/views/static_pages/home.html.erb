@@ -1,19 +1,46 @@
+<% provide('Home') %>
 <% if signed_in? %>
-<div class="row-fluid">
-    <div class="span6">
-      <section>
-        <%= render 'shared/user_info' %>
-      </section>
-      <section>
-        <%= render 'shared/stats' %>
-      </section>
-    </div>
-    <div class="span6">
-      <section>
-        <%= render 'shared/article_form' %>
-      </section>
-    </div>
+	<div id="home">
+		<div class="block">
+			<section id="top" class="row left">
+
+				<section id="current" class="col6">
+					<!-- Industry Name -->
+					<h3 class="left">Articles</h3>
+					
+					<!-- Add Article -->
+					<a href="#add" role="button" class="medium btn-purple round left" data-toggle="modal">Add Article</a>
+					
+				</section>
+
+				<!-- <section id="industries" class="right col6">
+					<div class="slide-container">
+						<section class="slide">
+						</section>
+					</div>
+					<a id="industries_prev" href="#">Previous</a>
+					<a id="industries_next" href="#">Next</a>
+				</section> -->
+			</section>
+			<script>
+				jQuery(document).ready(function() {
+
+					alert("is this working?");
+				});
+				</script>
+			<div class="cf"></div>
+			<%= render "shared/article_form" %> 
+			<%= render "shared/feed" %>
+		</div>
+	</div>
 <% else %>
+
+<style>
+	#main{
+		background:none;;
+	}
+</style>
+
 <div class="bg"></div>
 
 <!-- BEGIN #home -->
@@ -39,6 +66,5 @@
 		
 	</div>
 	<!-- END .block -->	
-
 </div>
 <%end%>
