@@ -1,23 +1,4 @@
 <% provide(:title, @user.first_name + @user.last_name) %>
-<div class = "row-fluid">
-	<aside class="span4">
-		<section>
-			<h1>
-				<%= @user.first_name + " " + @user.last_name %>
-			</h1>
-			<h2>
-					<%= @basic_profile.headline if @basic_profile%>
-			</h2>
-		</section>
-		<section>
-			<%= render 'shared/stats' %>
-		</section>
-	</aside>
-	<div class = "span4">
-	  
-	</div>
-</div>
-
 <div id="profile">
 
 <div class="block">
@@ -92,7 +73,6 @@
 	
 	<!-- BEGIN #profile #feed -->	
 	<section id="feed" class="left">
-
 		<section class="biv">
 			<header>Bivs</header>
 			<section class="feed">
@@ -123,38 +103,21 @@
 			
 			</section>
 		</section>
-		
-		<section class="articles">
-			<header>Articles</header>
-			<section class="feed">
-				<aside class="entry">
-					Article
-				</aside>
-				<aside class="entry">
-					Article
-				</aside>
-				<aside class="entry">
-					Article
-				</aside>
-				<aside class="entry">
-					Article
-				</aside>
-				<aside class="entry">
-					Article
-				</aside>
-				<aside class="entry">
-					Article
-				</aside>
-				<aside class="entry">
-					Article
-				</aside>
-				<aside class="entry">
-					Article
-				</aside>					
-			
+		<% if @user.articles.any? %>
+			<section class="articles">
+				<header>
+				<%= @user.articles.count %> Article<%= "s" if @user.articles.count > 1 %> </header>
+				<section class="feed">
+					<% @user.articles.each do |a| %>
+						<%= link_to(a) do %>
+							<aside class="entry">
+								<%= a.headline %>
+							</aside>
+							<% end %>
+					<% end %>
+				</section>
 			</section>
-		</section>
-	
+		<% end %>
 	
 	</section>
 	<!-- END #profile #feed -->
@@ -164,6 +127,6 @@
 	<!-- clear -->
 	<div class="cf"></div>
 	
-</div><!-- END .block -->
+</div>
 
-</div><!-- END #notifications -->
+</div>
