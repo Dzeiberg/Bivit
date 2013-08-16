@@ -14,11 +14,15 @@ class LinkedinController < ApplicationController
     end
   end
 
-  def linkedin_profile
+  def create
     @basic_profile = get_basic_profile
     @full_profile = get_full_profile
     @positions = get_positions
     @educations = get_educations
+  end
+  
+  def show
+ 	 @user = User.find(params[:id])
   end
 
   def oauth_account

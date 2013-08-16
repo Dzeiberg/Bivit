@@ -307,8 +307,8 @@ section#industries {width: 50%;}
 		
 		#profile #summary .summary {width: 47%; margin-right: 2%;}
 		#profile #summary .skills {width: 49%;}
-		#profile #summary .experience {width: 47%; margin-right: 2%;}
-		#profile #summary .education {width: 49%;}
+		#profile #summary .experience {width: 98%; margin-right: 2%;}
+		#profile #summary .education {width: 98%;}
 		
 		
 #profile #feed {width: 33%; }
