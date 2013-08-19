@@ -12,6 +12,6 @@ Gem::Specification.new do |s|
   s.homepage = "http://alkaline-solutions.com"
   s.rdoc_options = ["--title", "CookieJar -- Client-side HTTP Cookies"]
   s.require_paths = ["lib"]
-  s.rubygems_version = "2.0.0"
+  s.rubygems_version = "2.0.7"
   s.summary = "Client-side HTTP Cookie library"
 end

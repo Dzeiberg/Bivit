@@ -13,7 +13,7 @@ Gem::Specification.new do |s|
   s.post_install_message = "Important: You may need to add a javascript runtime to your Gemfile in order for bootstrap's LESS files to compile to CSS. \n\n**********************************************\n\nExecJS supports these runtimes:\n\ntherubyracer - Google V8 embedded within Ruby\n\ntherubyrhino - Mozilla Rhino embedded within JRuby\n\nNode.js\n\nApple JavaScriptCore - Included with Mac OS X\n\nMicrosoft Windows Script Host (JScript)\n\n**********************************************"
   s.require_paths = ["lib"]
   s.rubyforge_project = "twitter-bootstrap-rails"
-  s.rubygems_version = "2.0.0"
+  s.rubygems_version = "2.0.7"
   s.summary = "Bootstrap CSS toolkit for Rails 3.1 Asset Pipeline"
 
   if s.respond_to? :specification_version then

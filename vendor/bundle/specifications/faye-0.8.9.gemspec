@@ -13,7 +13,7 @@ Gem::Specification.new do |s|
   s.homepage = "http://faye.jcoglan.com"
   s.rdoc_options = ["--main", "README.rdoc"]
   s.require_paths = ["lib"]
-  s.rubygems_version = "2.0.0"
+  s.rubygems_version = "2.0.7"
   s.summary = "Simple pub/sub messaging for the web"
 
   if s.respond_to? :specification_version then

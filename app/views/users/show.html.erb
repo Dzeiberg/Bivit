@@ -11,6 +11,7 @@
 		<aside class="photo left">
 			<% if @basic_profile %>
 				<img src="<%= @basic_profile.picture_url %>"/>
+                <%= render 'users/follow_form' %>
 			<% end %>
 		</aside>
 		

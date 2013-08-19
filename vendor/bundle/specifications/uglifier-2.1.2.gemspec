@@ -13,7 +13,7 @@ Gem::Specification.new do |s|
   s.homepage = "http://github.com/lautis/uglifier"
   s.licenses = ["MIT"]
   s.require_paths = ["lib"]
-  s.rubygems_version = "2.0.0"
+  s.rubygems_version = "2.0.7"
   s.summary = "Ruby wrapper for UglifyJS JavaScript compressor"
 
   if s.respond_to? :specification_version then

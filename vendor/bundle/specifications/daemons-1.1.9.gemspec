@@ -14,6 +14,6 @@ Gem::Specification.new do |s|
   s.homepage = "http://daemons.rubyforge.org"
   s.require_paths = ["lib"]
   s.rubyforge_project = "daemons"
-  s.rubygems_version = "2.0.0"
+  s.rubygems_version = "2.0.7"
   s.summary = "A toolkit to create and control daemons in different ways"
 end

@@ -21,11 +21,6 @@ class UsersController < ApplicationController
 	  @users = @user.followed_users.paginate(page: params[:page])
 	  render 'show_follow'
 	end
-	
-	def biving
-	  @title = "Bivs"
-	  @user = User.find(params[:id])
-	  @rooms = @user.
 
 	def followers
 	  @title = "Followers"
@@ -94,7 +89,7 @@ end
       @basic_profile = @profile.to_hash
       @basic_profile[:location] = @basic_profile["location"]["name"]
       @new_basic_profile = BasicProfile.new(@basic_profile)
-      @new_basic_profile.user = User.find_by_user_id(params[:id])
+      @new_basic_profile.user = User.find_by_id(params[:id])
       @new_basic_profile.save 
       @new_basic_profile
     else
@@ -109,7 +104,7 @@ end
       @full_profile = @client.profile(:fields => [:associations, :honors, :interests, ])
       @full_profile = @full_profile.to_hash
       @new_full_profile = FullProfile.new(@full_profile)
-      @new_full_profile.user = User.find_by_user_id(params[:id])
+      @new_full_profile.user = User.find_by_id(params[:id])
       @new_full_profile.save 
       @new_full_profile
     else
@@ -118,7 +113,7 @@ end
   end
 
   def get_positions
-  	@full_profile = FullProfile.find_by_user_id(params[:id])
+  	@full_profile = FullProfile.find_by_id(params[:id])
     @positions = Position.find_all_by_full_profile_id(@full_profile.id)
     if @positions.empty?
       @client = get_client
@@ -143,14 +138,14 @@ end
             full_profile_id: current_user.full_profile.id)
         end
       end
-      User.find_by_user_id(params[:id]).full_profile.positions
+      User.find_by_id(params[:id]).full_profile.positions
     else
       @positions
     end
   end
 
   def get_educations
-  	@full_profile = FullProfile.find_by_user_id(params[:id])
+  	@full_profile = FullProfile.find_by_id(params[:id])
     @educations = Education.find_all_by_full_profile_id(@full_profile.id)
     if @educations.empty?
       @client = get_client
@@ -166,7 +161,7 @@ end
           notes: e.notes, 
           full_profile_id: current_user.full_profile.id)  
       end
-      User.find_by_user_id(params[:id]).full_profile.educations
+      User.find_by_id(params[:id]).full_profile.educations
     else
       @educations
     end

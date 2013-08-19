@@ -10,7 +10,7 @@ Gem::Specification.new do |s|
   s.email = "tom@conceptcoding.co.uk"
   s.homepage = "http://github.com/thomas-mcdonald/bootstrap-sass"
   s.require_paths = ["lib"]
-  s.rubygems_version = "2.0.0"
+  s.rubygems_version = "2.0.7"
   s.summary = "Twitter's Bootstrap, converted to Sass and ready to drop into Rails or Compass"
 
   if s.respond_to? :specification_version then

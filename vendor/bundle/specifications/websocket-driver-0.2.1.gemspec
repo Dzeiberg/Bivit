@@ -14,7 +14,7 @@ Gem::Specification.new do |s|
   s.homepage = "http://github.com/faye/websocket-driver-ruby"
   s.rdoc_options = ["--main", "README.md", "--markup", "markdown"]
   s.require_paths = ["lib"]
-  s.rubygems_version = "2.0.0"
+  s.rubygems_version = "2.0.7"
   s.summary = "WebSocket protocol handler with pluggable I/O"
 
   if s.respond_to? :specification_version then

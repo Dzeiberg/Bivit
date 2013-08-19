@@ -14,6 +14,6 @@ Gem::Specification.new do |s|
   s.homepage = "https://github.com/mislav/will_paginate/wiki"
   s.rdoc_options = ["--main", "README.md", "--charset=UTF-8"]
   s.require_paths = ["lib"]
-  s.rubygems_version = "2.0.0"
+  s.rubygems_version = "2.0.7"
   s.summary = "Pagination plugin for web frameworks and other apps"
 end

@@ -1,22 +1,54 @@
 have_library: checking for main() in -lc... -------------------- yes
 
-"gcc-4.2 -o conftest -I/Users/spencerbard/.rbenv/versions/2.0.0-p0/include/ruby-2.0.0/x86_64-darwin12.2.1 -I/Users/spencerbard/.rbenv/versions/2.0.0-p0/include/ruby-2.0.0/ruby/backward -I/Users/spencerbard/.rbenv/versions/2.0.0-p0/include/ruby-2.0.0 -I. -I'/Users/spencerbard/.rbenv/versions/2.0.0-p0/include'  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT     -Wno-error=shorten-64-to-32 -pipe conftest.c  -L. -L/Users/spencerbard/.rbenv/versions/2.0.0-p0/lib -L. -L'/Users/spencerbard/.rbenv/versions/2.0.0-p0/lib'      -lruby-static  -lpthread -ldl -lobjc "
+"/usr/local/bin/gcc-4.2 -o conftest -I/Users/spencerbard/.rvm/rubies/ruby-1.9.3-p448/include/ruby-1.9.1/x86_64-darwin12.4.0 -I/Users/spencerbard/.rvm/rubies/ruby-1.9.3-p448/include/ruby-1.9.1/ruby/backward -I/Users/spencerbard/.rvm/rubies/ruby-1.9.3-p448/include/ruby-1.9.1 -I. -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -I/Users/spencerbard/.rvm/opt/libyaml/include -I/Users/spencerbard/.rvm/opt/readline/include -I/Users/spencerbard/.rvm/opt/libksba/include -I/Users/spencerbard/.rvm/opt/openssl/include  -O3 -ggdb -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wshorten-64-to-32 -Wimplicit-function-declaration  -fno-common -pipe conftest.c  -L. -L/Users/spencerbard/.rvm/rubies/ruby-1.9.3-p448/lib -L/Users/spencerbard/.rvm/opt/libyaml/lib -L/Users/spencerbard/.rvm/opt/readline/lib -L/Users/spencerbard/.rvm/opt/libksba/lib -L/Users/spencerbard/.rvm/opt/openssl/lib -L.  -L/Users/spencerbard/.rvm/opt/libyaml/lib -L/Users/spencerbard/.rvm/opt/readline/lib -L/Users/spencerbard/.rvm/opt/libksba/lib -L/Users/spencerbard/.rvm/opt/openssl/lib      -lruby.1.9.1  -lpthread -ldl -lobjc "
 checked program was:
 /* begin */
 1: #include "ruby.h"
 2: 
-3: int main(void) {return 0;}
+3: int main(int argc, char **argv)
+4: {
+5:   return 0;
+6: }
 /* end */
 
-"gcc-4.2 -o conftest -I/Users/spencerbard/.rbenv/versions/2.0.0-p0/include/ruby-2.0.0/x86_64-darwin12.2.1 -I/Users/spencerbard/.rbenv/versions/2.0.0-p0/include/ruby-2.0.0/ruby/backward -I/Users/spencerbard/.rbenv/versions/2.0.0-p0/include/ruby-2.0.0 -I. -I'/Users/spencerbard/.rbenv/versions/2.0.0-p0/include'  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT     -Wno-error=shorten-64-to-32 -pipe conftest.c  -L. -L/Users/spencerbard/.rbenv/versions/2.0.0-p0/lib -L. -L'/Users/spencerbard/.rbenv/versions/2.0.0-p0/lib'      -lruby-static -lc  -lpthread -ldl -lobjc "
+"/usr/local/bin/gcc-4.2 -o conftest -I/Users/spencerbard/.rvm/rubies/ruby-1.9.3-p448/include/ruby-1.9.1/x86_64-darwin12.4.0 -I/Users/spencerbard/.rvm/rubies/ruby-1.9.3-p448/include/ruby-1.9.1/ruby/backward -I/Users/spencerbard/.rvm/rubies/ruby-1.9.3-p448/include/ruby-1.9.1 -I. -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -I/Users/spencerbard/.rvm/opt/libyaml/include -I/Users/spencerbard/.rvm/opt/readline/include -I/Users/spencerbard/.rvm/opt/libksba/include -I/Users/spencerbard/.rvm/opt/openssl/include  -O3 -ggdb -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wshorten-64-to-32 -Wimplicit-function-declaration  -fno-common -pipe conftest.c  -L. -L/Users/spencerbard/.rvm/rubies/ruby-1.9.3-p448/lib -L/Users/spencerbard/.rvm/opt/libyaml/lib -L/Users/spencerbard/.rvm/opt/readline/lib -L/Users/spencerbard/.rvm/opt/libksba/lib -L/Users/spencerbard/.rvm/opt/openssl/lib -L.  -L/Users/spencerbard/.rvm/opt/libyaml/lib -L/Users/spencerbard/.rvm/opt/readline/lib -L/Users/spencerbard/.rvm/opt/libksba/lib -L/Users/spencerbard/.rvm/opt/openssl/lib      -lruby.1.9.1 -lc  -lpthread -ldl -lobjc "
+conftest.c: In function ‘t’:
+conftest.c:4: error: ‘main’ undeclared (first use in this function)
+conftest.c:4: error: (Each undeclared identifier is reported only once
+conftest.c:4: error: for each function it appears in.)
 checked program was:
 /* begin */
-1: #include "ruby.h"
-2: 
-3: /*top*/
-4: int main(void) {return 0;}
-5: extern int t(void);
-6: int t(void) { void ((*volatile p)()); p = (void ((*)()))main; return 0; }
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: int t() { void ((*volatile p)()); p = (void ((*)()))main; return 0; }
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     printf("%p", &t);
+ 9:   }
+10: 
+11:   return 0;
+12: }
+/* end */
+
+"/usr/local/bin/gcc-4.2 -o conftest -I/Users/spencerbard/.rvm/rubies/ruby-1.9.3-p448/include/ruby-1.9.1/x86_64-darwin12.4.0 -I/Users/spencerbard/.rvm/rubies/ruby-1.9.3-p448/include/ruby-1.9.1/ruby/backward -I/Users/spencerbard/.rvm/rubies/ruby-1.9.3-p448/include/ruby-1.9.1 -I. -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -I/Users/spencerbard/.rvm/opt/libyaml/include -I/Users/spencerbard/.rvm/opt/readline/include -I/Users/spencerbard/.rvm/opt/libksba/include -I/Users/spencerbard/.rvm/opt/openssl/include  -O3 -ggdb -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wshorten-64-to-32 -Wimplicit-function-declaration  -fno-common -pipe conftest.c  -L. -L/Users/spencerbard/.rvm/rubies/ruby-1.9.3-p448/lib -L/Users/spencerbard/.rvm/opt/libyaml/lib -L/Users/spencerbard/.rvm/opt/readline/lib -L/Users/spencerbard/.rvm/opt/libksba/lib -L/Users/spencerbard/.rvm/opt/openssl/lib -L.  -L/Users/spencerbard/.rvm/opt/libyaml/lib -L/Users/spencerbard/.rvm/opt/readline/lib -L/Users/spencerbard/.rvm/opt/libksba/lib -L/Users/spencerbard/.rvm/opt/openssl/lib      -lruby.1.9.1 -lc  -lpthread -ldl -lobjc "
+conftest.c: In function ‘t’:
+conftest.c:4: warning: implicit declaration of function ‘main’
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: int t() { main(); return 0; }
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     printf("%p", &t);
+ 9:   }
+10: 
+11:   return 0;
+12: }
 /* end */
 
 --------------------

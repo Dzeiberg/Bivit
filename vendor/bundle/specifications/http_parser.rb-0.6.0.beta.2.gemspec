@@ -13,7 +13,7 @@ Gem::Specification.new do |s|
   s.files = ["ext/ruby_http_parser/extconf.rb"]
   s.homepage = "http://github.com/tmm1/http_parser.rb"
   s.require_paths = ["lib"]
-  s.rubygems_version = "2.0.0"
+  s.rubygems_version = "2.0.7"
   s.summary = "Simple callback-based HTTP request/response parser"
 
   if s.respond_to? :specification_version then

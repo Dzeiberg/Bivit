@@ -12,7 +12,7 @@ Gem::Specification.new do |s|
   s.homepage = "http://faker.rubyforge.org"
   s.require_paths = ["lib"]
   s.rubyforge_project = "faker"
-  s.rubygems_version = "2.0.0"
+  s.rubygems_version = "2.0.7"
   s.summary = "Easily generate fake data"
 
   if s.respond_to? :specification_version then

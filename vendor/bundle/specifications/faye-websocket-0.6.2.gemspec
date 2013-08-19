@@ -13,7 +13,7 @@ Gem::Specification.new do |s|
   s.homepage = "http://github.com/faye/faye-websocket-ruby"
   s.rdoc_options = ["--main", "README.md", "--markup", "markdown"]
   s.require_paths = ["lib"]
-  s.rubygems_version = "2.0.0"
+  s.rubygems_version = "2.0.7"
   s.summary = "Standards-compliant WebSocket server and client"
 
   if s.respond_to? :specification_version then

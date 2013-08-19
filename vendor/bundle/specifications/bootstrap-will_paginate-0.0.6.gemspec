@@ -12,7 +12,7 @@ Gem::Specification.new do |s|
   s.homepage = "http://ndfine.com/2011/12/17/twitter-bootstrap-will-paginate.html"
   s.require_paths = ["lib"]
   s.rubyforge_project = "bootstrap-will_paginate"
-  s.rubygems_version = "2.0.0"
+  s.rubygems_version = "2.0.7"
   s.summary = "Format will_paginate html to match Twitter Bootstrap styling."
 
   if s.respond_to? :specification_version then

@@ -11,7 +11,7 @@ Gem::Specification.new do |s|
   s.email = ["wynn.netherland@gmail.com", "josh.kalderimis@gmail.com"]
   s.homepage = "http://github.com/pengwynn/linkedin"
   s.require_paths = ["lib"]
-  s.rubygems_version = "2.0.0"
+  s.rubygems_version = "2.0.7"
   s.summary = "Ruby wrapper for the LinkedIn API"
 
   if s.respond_to? :specification_version then

@@ -14,6 +14,6 @@ Gem::Specification.new do |s|
   s.homepage = "http://www.kuwata-lab.com/erubis/"
   s.require_paths = ["lib"]
   s.rubyforge_project = "erubis"
-  s.rubygems_version = "2.0.0"
+  s.rubygems_version = "2.0.7"
   s.summary = "a fast and extensible eRuby implementation which supports multi-language"
 end

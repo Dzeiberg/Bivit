@@ -1,0 +1,5 @@
+<%= form_for(current_user.memberships.build(participant_id: @user.id),
+             remote: true) do |f| %>
+  <div><%= f.hidden_field :participant_id %></div>
+  <%= f.submit "Add", class: "btn btn-large btn-primary" %>
+<% end %>

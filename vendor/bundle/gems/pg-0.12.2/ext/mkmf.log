@@ -4,15 +4,18 @@ find_executable: checking for pg_config... -------------------- yes
 
 find_header: checking for libpq-fe.h... -------------------- yes
 
-"gcc-4.2 -o conftest -I/Users/spencerbard/.rbenv/versions/2.0.0-p0/include/ruby-2.0.0/x86_64-darwin12.2.1 -I/Users/spencerbard/.rbenv/versions/2.0.0-p0/include/ruby-2.0.0/ruby/backward -I/Users/spencerbard/.rbenv/versions/2.0.0-p0/include/ruby-2.0.0 -I. -I'/Users/spencerbard/.rbenv/versions/2.0.0-p0/include'  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -I/usr/include   -Wno-error=shorten-64-to-32 -pipe conftest.c  -L. -L/Users/spencerbard/.rbenv/versions/2.0.0-p0/lib -L. -L'/Users/spencerbard/.rbenv/versions/2.0.0-p0/lib'  -L/usr/lib     -lruby-static  -lpthread -ldl -lobjc "
+"/usr/local/bin/gcc-4.2 -o conftest -I/Users/spencerbard/.rvm/rubies/ruby-1.9.3-p448/include/ruby-1.9.1/x86_64-darwin12.4.0 -I/Users/spencerbard/.rvm/rubies/ruby-1.9.3-p448/include/ruby-1.9.1/ruby/backward -I/Users/spencerbard/.rvm/rubies/ruby-1.9.3-p448/include/ruby-1.9.1 -I. -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -I/Users/spencerbard/.rvm/opt/libyaml/include -I/Users/spencerbard/.rvm/opt/readline/include -I/Users/spencerbard/.rvm/opt/libksba/include -I/Users/spencerbard/.rvm/opt/openssl/include -I/usr/include  -O3 -ggdb -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wshorten-64-to-32 -Wimplicit-function-declaration  -fno-common -pipe conftest.c  -L. -L/Users/spencerbard/.rvm/rubies/ruby-1.9.3-p448/lib -L/Users/spencerbard/.rvm/opt/libyaml/lib -L/Users/spencerbard/.rvm/opt/readline/lib -L/Users/spencerbard/.rvm/opt/libksba/lib -L/Users/spencerbard/.rvm/opt/openssl/lib -L.  -L/Users/spencerbard/.rvm/opt/libyaml/lib -L/Users/spencerbard/.rvm/opt/readline/lib -L/Users/spencerbard/.rvm/opt/libksba/lib -L/Users/spencerbard/.rvm/opt/openssl/lib  -L/usr/lib     -lruby.1.9.1  -lpthread -ldl -lobjc "
 checked program was:
 /* begin */
 1: #include "ruby.h"
 2: 
-3: int main(void) {return 0;}
+3: int main(int argc, char **argv)
+4: {
+5:   return 0;
+6: }
 /* end */
 
-"gcc-4.2 -E -I/Users/spencerbard/.rbenv/versions/2.0.0-p0/include/ruby-2.0.0/x86_64-darwin12.2.1 -I/Users/spencerbard/.rbenv/versions/2.0.0-p0/include/ruby-2.0.0/ruby/backward -I/Users/spencerbard/.rbenv/versions/2.0.0-p0/include/ruby-2.0.0 -I. -I'/Users/spencerbard/.rbenv/versions/2.0.0-p0/include'  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -I/usr/include   -Wno-error=shorten-64-to-32 -pipe  conftest.c -o conftest.i"
+"/usr/local/bin/gcc-4.2 -E -I/Users/spencerbard/.rvm/rubies/ruby-1.9.3-p448/include/ruby-1.9.1/x86_64-darwin12.4.0 -I/Users/spencerbard/.rvm/rubies/ruby-1.9.3-p448/include/ruby-1.9.1/ruby/backward -I/Users/spencerbard/.rvm/rubies/ruby-1.9.3-p448/include/ruby-1.9.1 -I. -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -I/Users/spencerbard/.rvm/opt/libyaml/include -I/Users/spencerbard/.rvm/opt/readline/include -I/Users/spencerbard/.rvm/opt/libksba/include -I/Users/spencerbard/.rvm/opt/openssl/include -I/usr/include  -O3 -ggdb -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wshorten-64-to-32 -Wimplicit-function-declaration  -fno-common -pipe  conftest.c -o conftest.i"
 checked program was:
 /* begin */
 1: #include "ruby.h"
@@ -24,7 +27,7 @@ checked program was:
 
 find_header: checking for libpq/libpq-fs.h... -------------------- yes
 
-"gcc-4.2 -E -I/Users/spencerbard/.rbenv/versions/2.0.0-p0/include/ruby-2.0.0/x86_64-darwin12.2.1 -I/Users/spencerbard/.rbenv/versions/2.0.0-p0/include/ruby-2.0.0/ruby/backward -I/Users/spencerbard/.rbenv/versions/2.0.0-p0/include/ruby-2.0.0 -I. -I'/Users/spencerbard/.rbenv/versions/2.0.0-p0/include'  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -I/usr/include   -Wno-error=shorten-64-to-32 -pipe  conftest.c -o conftest.i"
+"/usr/local/bin/gcc-4.2 -E -I/Users/spencerbard/.rvm/rubies/ruby-1.9.3-p448/include/ruby-1.9.1/x86_64-darwin12.4.0 -I/Users/spencerbard/.rvm/rubies/ruby-1.9.3-p448/include/ruby-1.9.1/ruby/backward -I/Users/spencerbard/.rvm/rubies/ruby-1.9.3-p448/include/ruby-1.9.1 -I. -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -I/Users/spencerbard/.rvm/opt/libyaml/include -I/Users/spencerbard/.rvm/opt/readline/include -I/Users/spencerbard/.rvm/opt/libksba/include -I/Users/spencerbard/.rvm/opt/openssl/include -I/usr/include  -O3 -ggdb -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wshorten-64-to-32 -Wimplicit-function-declaration  -fno-common -pipe  conftest.c -o conftest.i"
 checked program was:
 /* begin */
 1: #include "ruby.h"
@@ -36,400 +39,586 @@ checked program was:
 
 have_library: checking for PQconnectdb() in -lpq... -------------------- yes
 
-"gcc-4.2 -o conftest -I/Users/spencerbard/.rbenv/versions/2.0.0-p0/include/ruby-2.0.0/x86_64-darwin12.2.1 -I/Users/spencerbard/.rbenv/versions/2.0.0-p0/include/ruby-2.0.0/ruby/backward -I/Users/spencerbard/.rbenv/versions/2.0.0-p0/include/ruby-2.0.0 -I. -I'/Users/spencerbard/.rbenv/versions/2.0.0-p0/include'  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -I/usr/include   -Wno-error=shorten-64-to-32 -pipe conftest.c  -L. -L/Users/spencerbard/.rbenv/versions/2.0.0-p0/lib -L. -L'/Users/spencerbard/.rbenv/versions/2.0.0-p0/lib'  -L/usr/lib     -lruby-static -lpq  -lpthread -ldl -lobjc "
+"/usr/local/bin/gcc-4.2 -o conftest -I/Users/spencerbard/.rvm/rubies/ruby-1.9.3-p448/include/ruby-1.9.1/x86_64-darwin12.4.0 -I/Users/spencerbard/.rvm/rubies/ruby-1.9.3-p448/include/ruby-1.9.1/ruby/backward -I/Users/spencerbard/.rvm/rubies/ruby-1.9.3-p448/include/ruby-1.9.1 -I. -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -I/Users/spencerbard/.rvm/opt/libyaml/include -I/Users/spencerbard/.rvm/opt/readline/include -I/Users/spencerbard/.rvm/opt/libksba/include -I/Users/spencerbard/.rvm/opt/openssl/include -I/usr/include  -O3 -ggdb -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wshorten-64-to-32 -Wimplicit-function-declaration  -fno-common -pipe conftest.c  -L. -L/Users/spencerbard/.rvm/rubies/ruby-1.9.3-p448/lib -L/Users/spencerbard/.rvm/opt/libyaml/lib -L/Users/spencerbard/.rvm/opt/readline/lib -L/Users/spencerbard/.rvm/opt/libksba/lib -L/Users/spencerbard/.rvm/opt/openssl/lib -L.  -L/Users/spencerbard/.rvm/opt/libyaml/lib -L/Users/spencerbard/.rvm/opt/readline/lib -L/Users/spencerbard/.rvm/opt/libksba/lib -L/Users/spencerbard/.rvm/opt/openssl/lib  -L/usr/lib     -lruby.1.9.1 -lpq  -lpthread -ldl -lobjc "
 checked program was:
 /* begin */
-1: #include "ruby.h"
-2: 
-3: #include <libpq-fe.h>
-4: 
-5: /*top*/
-6: int main(void) {return 0;}
-7: extern int t(void);
-8: int t(void) { void ((*volatile p)()); p = (void ((*)()))PQconnectdb; return 0; }
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <libpq-fe.h>
+ 4: 
+ 5: /*top*/
+ 6: int t() { void ((*volatile p)()); p = (void ((*)()))PQconnectdb; return 0; }
+ 7: int main(int argc, char **argv)
+ 8: {
+ 9:   if (argc > 1000000) {
+10:     printf("%p", &t);
+11:   }
+12: 
+13:   return 0;
+14: }
 /* end */
 
 --------------------
 
 have_func: checking for PQconnectionUsedPassword()... -------------------- yes
 
-"gcc-4.2 -o conftest -I/Users/spencerbard/.rbenv/versions/2.0.0-p0/include/ruby-2.0.0/x86_64-darwin12.2.1 -I/Users/spencerbard/.rbenv/versions/2.0.0-p0/include/ruby-2.0.0/ruby/backward -I/Users/spencerbard/.rbenv/versions/2.0.0-p0/include/ruby-2.0.0 -I. -I'/Users/spencerbard/.rbenv/versions/2.0.0-p0/include'  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -I/usr/include   -Wno-error=shorten-64-to-32 -pipe conftest.c  -L. -L/Users/spencerbard/.rbenv/versions/2.0.0-p0/lib -L. -L'/Users/spencerbard/.rbenv/versions/2.0.0-p0/lib'  -L/usr/lib    -lpq  -lruby-static -lpq  -lpthread -ldl -lobjc "
+"/usr/local/bin/gcc-4.2 -o conftest -I/Users/spencerbard/.rvm/rubies/ruby-1.9.3-p448/include/ruby-1.9.1/x86_64-darwin12.4.0 -I/Users/spencerbard/.rvm/rubies/ruby-1.9.3-p448/include/ruby-1.9.1/ruby/backward -I/Users/spencerbard/.rvm/rubies/ruby-1.9.3-p448/include/ruby-1.9.1 -I. -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -I/Users/spencerbard/.rvm/opt/libyaml/include -I/Users/spencerbard/.rvm/opt/readline/include -I/Users/spencerbard/.rvm/opt/libksba/include -I/Users/spencerbard/.rvm/opt/openssl/include -I/usr/include  -O3 -ggdb -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wshorten-64-to-32 -Wimplicit-function-declaration  -fno-common -pipe conftest.c  -L. -L/Users/spencerbard/.rvm/rubies/ruby-1.9.3-p448/lib -L/Users/spencerbard/.rvm/opt/libyaml/lib -L/Users/spencerbard/.rvm/opt/readline/lib -L/Users/spencerbard/.rvm/opt/libksba/lib -L/Users/spencerbard/.rvm/opt/openssl/lib -L.  -L/Users/spencerbard/.rvm/opt/libyaml/lib -L/Users/spencerbard/.rvm/opt/readline/lib -L/Users/spencerbard/.rvm/opt/libksba/lib -L/Users/spencerbard/.rvm/opt/openssl/lib  -L/usr/lib    -lpq  -lruby.1.9.1 -lpq  -lpthread -ldl -lobjc "
 conftest.c: In function ‘t’:
-conftest.c:6: error: ‘PQconnectionUsedPassword’ undeclared (first use in this function)
-conftest.c:6: error: (Each undeclared identifier is reported only once
-conftest.c:6: error: for each function it appears in.)
+conftest.c:4: error: ‘PQconnectionUsedPassword’ undeclared (first use in this function)
+conftest.c:4: error: (Each undeclared identifier is reported only once
+conftest.c:4: error: for each function it appears in.)
 checked program was:
 /* begin */
-1: #include "ruby.h"
-2: 
-3: /*top*/
-4: int main(void) {return 0;}
-5: extern int t(void);
-6: int t(void) { void ((*volatile p)()); p = (void ((*)()))PQconnectionUsedPassword; return 0; }
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: int t() { void ((*volatile p)()); p = (void ((*)()))PQconnectionUsedPassword; return 0; }
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     printf("%p", &t);
+ 9:   }
+10: 
+11:   return 0;
+12: }
 /* end */
 
-"gcc-4.2 -o conftest -I/Users/spencerbard/.rbenv/versions/2.0.0-p0/include/ruby-2.0.0/x86_64-darwin12.2.1 -I/Users/spencerbard/.rbenv/versions/2.0.0-p0/include/ruby-2.0.0/ruby/backward -I/Users/spencerbard/.rbenv/versions/2.0.0-p0/include/ruby-2.0.0 -I. -I'/Users/spencerbard/.rbenv/versions/2.0.0-p0/include'  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -I/usr/include   -Wno-error=shorten-64-to-32 -pipe conftest.c  -L. -L/Users/spencerbard/.rbenv/versions/2.0.0-p0/lib -L. -L'/Users/spencerbard/.rbenv/versions/2.0.0-p0/lib'  -L/usr/lib    -lpq  -lruby-static -lpq  -lpthread -ldl -lobjc "
+"/usr/local/bin/gcc-4.2 -o conftest -I/Users/spencerbard/.rvm/rubies/ruby-1.9.3-p448/include/ruby-1.9.1/x86_64-darwin12.4.0 -I/Users/spencerbard/.rvm/rubies/ruby-1.9.3-p448/include/ruby-1.9.1/ruby/backward -I/Users/spencerbard/.rvm/rubies/ruby-1.9.3-p448/include/ruby-1.9.1 -I. -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -I/Users/spencerbard/.rvm/opt/libyaml/include -I/Users/spencerbard/.rvm/opt/readline/include -I/Users/spencerbard/.rvm/opt/libksba/include -I/Users/spencerbard/.rvm/opt/openssl/include -I/usr/include  -O3 -ggdb -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wshorten-64-to-32 -Wimplicit-function-declaration  -fno-common -pipe conftest.c  -L. -L/Users/spencerbard/.rvm/rubies/ruby-1.9.3-p448/lib -L/Users/spencerbard/.rvm/opt/libyaml/lib -L/Users/spencerbard/.rvm/opt/readline/lib -L/Users/spencerbard/.rvm/opt/libksba/lib -L/Users/spencerbard/.rvm/opt/openssl/lib -L.  -L/Users/spencerbard/.rvm/opt/libyaml/lib -L/Users/spencerbard/.rvm/opt/readline/lib -L/Users/spencerbard/.rvm/opt/libksba/lib -L/Users/spencerbard/.rvm/opt/openssl/lib  -L/usr/lib    -lpq  -lruby.1.9.1 -lpq  -lpthread -ldl -lobjc "
+conftest.c: In function ‘t’:
+conftest.c:4: warning: implicit declaration of function ‘PQconnectionUsedPassword’
 checked program was:
 /* begin */
-1: #include "ruby.h"
-2: 
-3: /*top*/
-4: int main(void) {return 0;}
-5: extern int t(void);
-6: int t(void) { PQconnectionUsedPassword(); return 0; }
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: int t() { PQconnectionUsedPassword(); return 0; }
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     printf("%p", &t);
+ 9:   }
+10: 
+11:   return 0;
+12: }
 /* end */
 
 --------------------
 
 have_func: checking for PQisthreadsafe()... -------------------- yes
 
-"gcc-4.2 -o conftest -I/Users/spencerbard/.rbenv/versions/2.0.0-p0/include/ruby-2.0.0/x86_64-darwin12.2.1 -I/Users/spencerbard/.rbenv/versions/2.0.0-p0/include/ruby-2.0.0/ruby/backward -I/Users/spencerbard/.rbenv/versions/2.0.0-p0/include/ruby-2.0.0 -I. -I'/Users/spencerbard/.rbenv/versions/2.0.0-p0/include'  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -I/usr/include   -Wno-error=shorten-64-to-32 -pipe conftest.c  -L. -L/Users/spencerbard/.rbenv/versions/2.0.0-p0/lib -L. -L'/Users/spencerbard/.rbenv/versions/2.0.0-p0/lib'  -L/usr/lib    -lpq  -lruby-static -lpq  -lpthread -ldl -lobjc "
+"/usr/local/bin/gcc-4.2 -o conftest -I/Users/spencerbard/.rvm/rubies/ruby-1.9.3-p448/include/ruby-1.9.1/x86_64-darwin12.4.0 -I/Users/spencerbard/.rvm/rubies/ruby-1.9.3-p448/include/ruby-1.9.1/ruby/backward -I/Users/spencerbard/.rvm/rubies/ruby-1.9.3-p448/include/ruby-1.9.1 -I. -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -I/Users/spencerbard/.rvm/opt/libyaml/include -I/Users/spencerbard/.rvm/opt/readline/include -I/Users/spencerbard/.rvm/opt/libksba/include -I/Users/spencerbard/.rvm/opt/openssl/include -I/usr/include  -O3 -ggdb -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wshorten-64-to-32 -Wimplicit-function-declaration  -fno-common -pipe conftest.c  -L. -L/Users/spencerbard/.rvm/rubies/ruby-1.9.3-p448/lib -L/Users/spencerbard/.rvm/opt/libyaml/lib -L/Users/spencerbard/.rvm/opt/readline/lib -L/Users/spencerbard/.rvm/opt/libksba/lib -L/Users/spencerbard/.rvm/opt/openssl/lib -L.  -L/Users/spencerbard/.rvm/opt/libyaml/lib -L/Users/spencerbard/.rvm/opt/readline/lib -L/Users/spencerbard/.rvm/opt/libksba/lib -L/Users/spencerbard/.rvm/opt/openssl/lib  -L/usr/lib    -lpq  -lruby.1.9.1 -lpq  -lpthread -ldl -lobjc "
 conftest.c: In function ‘t’:
-conftest.c:6: error: ‘PQisthreadsafe’ undeclared (first use in this function)
-conftest.c:6: error: (Each undeclared identifier is reported only once
-conftest.c:6: error: for each function it appears in.)
+conftest.c:4: error: ‘PQisthreadsafe’ undeclared (first use in this function)
+conftest.c:4: error: (Each undeclared identifier is reported only once
+conftest.c:4: error: for each function it appears in.)
 checked program was:
 /* begin */
-1: #include "ruby.h"
-2: 
-3: /*top*/
-4: int main(void) {return 0;}
-5: extern int t(void);
-6: int t(void) { void ((*volatile p)()); p = (void ((*)()))PQisthreadsafe; return 0; }
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: int t() { void ((*volatile p)()); p = (void ((*)()))PQisthreadsafe; return 0; }
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     printf("%p", &t);
+ 9:   }
+10: 
+11:   return 0;
+12: }
 /* end */
 
-"gcc-4.2 -o conftest -I/Users/spencerbard/.rbenv/versions/2.0.0-p0/include/ruby-2.0.0/x86_64-darwin12.2.1 -I/Users/spencerbard/.rbenv/versions/2.0.0-p0/include/ruby-2.0.0/ruby/backward -I/Users/spencerbard/.rbenv/versions/2.0.0-p0/include/ruby-2.0.0 -I. -I'/Users/spencerbard/.rbenv/versions/2.0.0-p0/include'  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -I/usr/include   -Wno-error=shorten-64-to-32 -pipe conftest.c  -L. -L/Users/spencerbard/.rbenv/versions/2.0.0-p0/lib -L. -L'/Users/spencerbard/.rbenv/versions/2.0.0-p0/lib'  -L/usr/lib    -lpq  -lruby-static -lpq  -lpthread -ldl -lobjc "
+"/usr/local/bin/gcc-4.2 -o conftest -I/Users/spencerbard/.rvm/rubies/ruby-1.9.3-p448/include/ruby-1.9.1/x86_64-darwin12.4.0 -I/Users/spencerbard/.rvm/rubies/ruby-1.9.3-p448/include/ruby-1.9.1/ruby/backward -I/Users/spencerbard/.rvm/rubies/ruby-1.9.3-p448/include/ruby-1.9.1 -I. -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -I/Users/spencerbard/.rvm/opt/libyaml/include -I/Users/spencerbard/.rvm/opt/readline/include -I/Users/spencerbard/.rvm/opt/libksba/include -I/Users/spencerbard/.rvm/opt/openssl/include -I/usr/include  -O3 -ggdb -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wshorten-64-to-32 -Wimplicit-function-declaration  -fno-common -pipe conftest.c  -L. -L/Users/spencerbard/.rvm/rubies/ruby-1.9.3-p448/lib -L/Users/spencerbard/.rvm/opt/libyaml/lib -L/Users/spencerbard/.rvm/opt/readline/lib -L/Users/spencerbard/.rvm/opt/libksba/lib -L/Users/spencerbard/.rvm/opt/openssl/lib -L.  -L/Users/spencerbard/.rvm/opt/libyaml/lib -L/Users/spencerbard/.rvm/opt/readline/lib -L/Users/spencerbard/.rvm/opt/libksba/lib -L/Users/spencerbard/.rvm/opt/openssl/lib  -L/usr/lib    -lpq  -lruby.1.9.1 -lpq  -lpthread -ldl -lobjc "
+conftest.c: In function ‘t’:
+conftest.c:4: warning: implicit declaration of function ‘PQisthreadsafe’
 checked program was:
 /* begin */
-1: #include "ruby.h"
-2: 
-3: /*top*/
-4: int main(void) {return 0;}
-5: extern int t(void);
-6: int t(void) { PQisthreadsafe(); return 0; }
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: int t() { PQisthreadsafe(); return 0; }
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     printf("%p", &t);
+ 9:   }
+10: 
+11:   return 0;
+12: }
 /* end */
 
 --------------------
 
 have_func: checking for PQprepare()... -------------------- yes
 
-"gcc-4.2 -o conftest -I/Users/spencerbard/.rbenv/versions/2.0.0-p0/include/ruby-2.0.0/x86_64-darwin12.2.1 -I/Users/spencerbard/.rbenv/versions/2.0.0-p0/include/ruby-2.0.0/ruby/backward -I/Users/spencerbard/.rbenv/versions/2.0.0-p0/include/ruby-2.0.0 -I. -I'/Users/spencerbard/.rbenv/versions/2.0.0-p0/include'  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -I/usr/include   -Wno-error=shorten-64-to-32 -pipe conftest.c  -L. -L/Users/spencerbard/.rbenv/versions/2.0.0-p0/lib -L. -L'/Users/spencerbard/.rbenv/versions/2.0.0-p0/lib'  -L/usr/lib    -lpq  -lruby-static -lpq  -lpthread -ldl -lobjc "
+"/usr/local/bin/gcc-4.2 -o conftest -I/Users/spencerbard/.rvm/rubies/ruby-1.9.3-p448/include/ruby-1.9.1/x86_64-darwin12.4.0 -I/Users/spencerbard/.rvm/rubies/ruby-1.9.3-p448/include/ruby-1.9.1/ruby/backward -I/Users/spencerbard/.rvm/rubies/ruby-1.9.3-p448/include/ruby-1.9.1 -I. -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -I/Users/spencerbard/.rvm/opt/libyaml/include -I/Users/spencerbard/.rvm/opt/readline/include -I/Users/spencerbard/.rvm/opt/libksba/include -I/Users/spencerbard/.rvm/opt/openssl/include -I/usr/include  -O3 -ggdb -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wshorten-64-to-32 -Wimplicit-function-declaration  -fno-common -pipe conftest.c  -L. -L/Users/spencerbard/.rvm/rubies/ruby-1.9.3-p448/lib -L/Users/spencerbard/.rvm/opt/libyaml/lib -L/Users/spencerbard/.rvm/opt/readline/lib -L/Users/spencerbard/.rvm/opt/libksba/lib -L/Users/spencerbard/.rvm/opt/openssl/lib -L.  -L/Users/spencerbard/.rvm/opt/libyaml/lib -L/Users/spencerbard/.rvm/opt/readline/lib -L/Users/spencerbard/.rvm/opt/libksba/lib -L/Users/spencerbard/.rvm/opt/openssl/lib  -L/usr/lib    -lpq  -lruby.1.9.1 -lpq  -lpthread -ldl -lobjc "
 conftest.c: In function ‘t’:
-conftest.c:6: error: ‘PQprepare’ undeclared (first use in this function)
-conftest.c:6: error: (Each undeclared identifier is reported only once
-conftest.c:6: error: for each function it appears in.)
+conftest.c:4: error: ‘PQprepare’ undeclared (first use in this function)
+conftest.c:4: error: (Each undeclared identifier is reported only once
+conftest.c:4: error: for each function it appears in.)
 checked program was:
 /* begin */
-1: #include "ruby.h"
-2: 
-3: /*top*/
-4: int main(void) {return 0;}
-5: extern int t(void);
-6: int t(void) { void ((*volatile p)()); p = (void ((*)()))PQprepare; return 0; }
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: int t() { void ((*volatile p)()); p = (void ((*)()))PQprepare; return 0; }
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     printf("%p", &t);
+ 9:   }
+10: 
+11:   return 0;
+12: }
 /* end */
 
-"gcc-4.2 -o conftest -I/Users/spencerbard/.rbenv/versions/2.0.0-p0/include/ruby-2.0.0/x86_64-darwin12.2.1 -I/Users/spencerbard/.rbenv/versions/2.0.0-p0/include/ruby-2.0.0/ruby/backward -I/Users/spencerbard/.rbenv/versions/2.0.0-p0/include/ruby-2.0.0 -I. -I'/Users/spencerbard/.rbenv/versions/2.0.0-p0/include'  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -I/usr/include   -Wno-error=shorten-64-to-32 -pipe conftest.c  -L. -L/Users/spencerbard/.rbenv/versions/2.0.0-p0/lib -L. -L'/Users/spencerbard/.rbenv/versions/2.0.0-p0/lib'  -L/usr/lib    -lpq  -lruby-static -lpq  -lpthread -ldl -lobjc "
+"/usr/local/bin/gcc-4.2 -o conftest -I/Users/spencerbard/.rvm/rubies/ruby-1.9.3-p448/include/ruby-1.9.1/x86_64-darwin12.4.0 -I/Users/spencerbard/.rvm/rubies/ruby-1.9.3-p448/include/ruby-1.9.1/ruby/backward -I/Users/spencerbard/.rvm/rubies/ruby-1.9.3-p448/include/ruby-1.9.1 -I. -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -I/Users/spencerbard/.rvm/opt/libyaml/include -I/Users/spencerbard/.rvm/opt/readline/include -I/Users/spencerbard/.rvm/opt/libksba/include -I/Users/spencerbard/.rvm/opt/openssl/include -I/usr/include  -O3 -ggdb -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wshorten-64-to-32 -Wimplicit-function-declaration  -fno-common -pipe conftest.c  -L. -L/Users/spencerbard/.rvm/rubies/ruby-1.9.3-p448/lib -L/Users/spencerbard/.rvm/opt/libyaml/lib -L/Users/spencerbard/.rvm/opt/readline/lib -L/Users/spencerbard/.rvm/opt/libksba/lib -L/Users/spencerbard/.rvm/opt/openssl/lib -L.  -L/Users/spencerbard/.rvm/opt/libyaml/lib -L/Users/spencerbard/.rvm/opt/readline/lib -L/Users/spencerbard/.rvm/opt/libksba/lib -L/Users/spencerbard/.rvm/opt/openssl/lib  -L/usr/lib    -lpq  -lruby.1.9.1 -lpq  -lpthread -ldl -lobjc "
+conftest.c: In function ‘t’:
+conftest.c:4: warning: implicit declaration of function ‘PQprepare’
 checked program was:
 /* begin */
-1: #include "ruby.h"
-2: 
-3: /*top*/
-4: int main(void) {return 0;}
-5: extern int t(void);
-6: int t(void) { PQprepare(); return 0; }
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: int t() { PQprepare(); return 0; }
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     printf("%p", &t);
+ 9:   }
+10: 
+11:   return 0;
+12: }
 /* end */
 
 --------------------
 
 have_func: checking for PQexecParams()... -------------------- yes
 
-"gcc-4.2 -o conftest -I/Users/spencerbard/.rbenv/versions/2.0.0-p0/include/ruby-2.0.0/x86_64-darwin12.2.1 -I/Users/spencerbard/.rbenv/versions/2.0.0-p0/include/ruby-2.0.0/ruby/backward -I/Users/spencerbard/.rbenv/versions/2.0.0-p0/include/ruby-2.0.0 -I. -I'/Users/spencerbard/.rbenv/versions/2.0.0-p0/include'  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -I/usr/include   -Wno-error=shorten-64-to-32 -pipe conftest.c  -L. -L/Users/spencerbard/.rbenv/versions/2.0.0-p0/lib -L. -L'/Users/spencerbard/.rbenv/versions/2.0.0-p0/lib'  -L/usr/lib    -lpq  -lruby-static -lpq  -lpthread -ldl -lobjc "
+"/usr/local/bin/gcc-4.2 -o conftest -I/Users/spencerbard/.rvm/rubies/ruby-1.9.3-p448/include/ruby-1.9.1/x86_64-darwin12.4.0 -I/Users/spencerbard/.rvm/rubies/ruby-1.9.3-p448/include/ruby-1.9.1/ruby/backward -I/Users/spencerbard/.rvm/rubies/ruby-1.9.3-p448/include/ruby-1.9.1 -I. -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -I/Users/spencerbard/.rvm/opt/libyaml/include -I/Users/spencerbard/.rvm/opt/readline/include -I/Users/spencerbard/.rvm/opt/libksba/include -I/Users/spencerbard/.rvm/opt/openssl/include -I/usr/include  -O3 -ggdb -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wshorten-64-to-32 -Wimplicit-function-declaration  -fno-common -pipe conftest.c  -L. -L/Users/spencerbard/.rvm/rubies/ruby-1.9.3-p448/lib -L/Users/spencerbard/.rvm/opt/libyaml/lib -L/Users/spencerbard/.rvm/opt/readline/lib -L/Users/spencerbard/.rvm/opt/libksba/lib -L/Users/spencerbard/.rvm/opt/openssl/lib -L.  -L/Users/spencerbard/.rvm/opt/libyaml/lib -L/Users/spencerbard/.rvm/opt/readline/lib -L/Users/spencerbard/.rvm/opt/libksba/lib -L/Users/spencerbard/.rvm/opt/openssl/lib  -L/usr/lib    -lpq  -lruby.1.9.1 -lpq  -lpthread -ldl -lobjc "
 conftest.c: In function ‘t’:
-conftest.c:6: error: ‘PQexecParams’ undeclared (first use in this function)
-conftest.c:6: error: (Each undeclared identifier is reported only once
-conftest.c:6: error: for each function it appears in.)
+conftest.c:4: error: ‘PQexecParams’ undeclared (first use in this function)
+conftest.c:4: error: (Each undeclared identifier is reported only once
+conftest.c:4: error: for each function it appears in.)
 checked program was:
 /* begin */
-1: #include "ruby.h"
-2: 
-3: /*top*/
-4: int main(void) {return 0;}
-5: extern int t(void);
-6: int t(void) { void ((*volatile p)()); p = (void ((*)()))PQexecParams; return 0; }
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: int t() { void ((*volatile p)()); p = (void ((*)()))PQexecParams; return 0; }
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     printf("%p", &t);
+ 9:   }
+10: 
+11:   return 0;
+12: }
 /* end */
 
-"gcc-4.2 -o conftest -I/Users/spencerbard/.rbenv/versions/2.0.0-p0/include/ruby-2.0.0/x86_64-darwin12.2.1 -I/Users/spencerbard/.rbenv/versions/2.0.0-p0/include/ruby-2.0.0/ruby/backward -I/Users/spencerbard/.rbenv/versions/2.0.0-p0/include/ruby-2.0.0 -I. -I'/Users/spencerbard/.rbenv/versions/2.0.0-p0/include'  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -I/usr/include   -Wno-error=shorten-64-to-32 -pipe conftest.c  -L. -L/Users/spencerbard/.rbenv/versions/2.0.0-p0/lib -L. -L'/Users/spencerbard/.rbenv/versions/2.0.0-p0/lib'  -L/usr/lib    -lpq  -lruby-static -lpq  -lpthread -ldl -lobjc "
+"/usr/local/bin/gcc-4.2 -o conftest -I/Users/spencerbard/.rvm/rubies/ruby-1.9.3-p448/include/ruby-1.9.1/x86_64-darwin12.4.0 -I/Users/spencerbard/.rvm/rubies/ruby-1.9.3-p448/include/ruby-1.9.1/ruby/backward -I/Users/spencerbard/.rvm/rubies/ruby-1.9.3-p448/include/ruby-1.9.1 -I. -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -I/Users/spencerbard/.rvm/opt/libyaml/include -I/Users/spencerbard/.rvm/opt/readline/include -I/Users/spencerbard/.rvm/opt/libksba/include -I/Users/spencerbard/.rvm/opt/openssl/include -I/usr/include  -O3 -ggdb -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wshorten-64-to-32 -Wimplicit-function-declaration  -fno-common -pipe conftest.c  -L. -L/Users/spencerbard/.rvm/rubies/ruby-1.9.3-p448/lib -L/Users/spencerbard/.rvm/opt/libyaml/lib -L/Users/spencerbard/.rvm/opt/readline/lib -L/Users/spencerbard/.rvm/opt/libksba/lib -L/Users/spencerbard/.rvm/opt/openssl/lib -L.  -L/Users/spencerbard/.rvm/opt/libyaml/lib -L/Users/spencerbard/.rvm/opt/readline/lib -L/Users/spencerbard/.rvm/opt/libksba/lib -L/Users/spencerbard/.rvm/opt/openssl/lib  -L/usr/lib    -lpq  -lruby.1.9.1 -lpq  -lpthread -ldl -lobjc "
+conftest.c: In function ‘t’:
+conftest.c:4: warning: implicit declaration of function ‘PQexecParams’
 checked program was:
 /* begin */
-1: #include "ruby.h"
-2: 
-3: /*top*/
-4: int main(void) {return 0;}
-5: extern int t(void);
-6: int t(void) { PQexecParams(); return 0; }
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: int t() { PQexecParams(); return 0; }
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     printf("%p", &t);
+ 9:   }
+10: 
+11:   return 0;
+12: }
 /* end */
 
 --------------------
 
 have_func: checking for PQescapeString()... -------------------- yes
 
-"gcc-4.2 -o conftest -I/Users/spencerbard/.rbenv/versions/2.0.0-p0/include/ruby-2.0.0/x86_64-darwin12.2.1 -I/Users/spencerbard/.rbenv/versions/2.0.0-p0/include/ruby-2.0.0/ruby/backward -I/Users/spencerbard/.rbenv/versions/2.0.0-p0/include/ruby-2.0.0 -I. -I'/Users/spencerbard/.rbenv/versions/2.0.0-p0/include'  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -I/usr/include   -Wno-error=shorten-64-to-32 -pipe conftest.c  -L. -L/Users/spencerbard/.rbenv/versions/2.0.0-p0/lib -L. -L'/Users/spencerbard/.rbenv/versions/2.0.0-p0/lib'  -L/usr/lib    -lpq  -lruby-static -lpq  -lpthread -ldl -lobjc "
+"/usr/local/bin/gcc-4.2 -o conftest -I/Users/spencerbard/.rvm/rubies/ruby-1.9.3-p448/include/ruby-1.9.1/x86_64-darwin12.4.0 -I/Users/spencerbard/.rvm/rubies/ruby-1.9.3-p448/include/ruby-1.9.1/ruby/backward -I/Users/spencerbard/.rvm/rubies/ruby-1.9.3-p448/include/ruby-1.9.1 -I. -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -I/Users/spencerbard/.rvm/opt/libyaml/include -I/Users/spencerbard/.rvm/opt/readline/include -I/Users/spencerbard/.rvm/opt/libksba/include -I/Users/spencerbard/.rvm/opt/openssl/include -I/usr/include  -O3 -ggdb -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wshorten-64-to-32 -Wimplicit-function-declaration  -fno-common -pipe conftest.c  -L. -L/Users/spencerbard/.rvm/rubies/ruby-1.9.3-p448/lib -L/Users/spencerbard/.rvm/opt/libyaml/lib -L/Users/spencerbard/.rvm/opt/readline/lib -L/Users/spencerbard/.rvm/opt/libksba/lib -L/Users/spencerbard/.rvm/opt/openssl/lib -L.  -L/Users/spencerbard/.rvm/opt/libyaml/lib -L/Users/spencerbard/.rvm/opt/readline/lib -L/Users/spencerbard/.rvm/opt/libksba/lib -L/Users/spencerbard/.rvm/opt/openssl/lib  -L/usr/lib    -lpq  -lruby.1.9.1 -lpq  -lpthread -ldl -lobjc "
 conftest.c: In function ‘t’:
-conftest.c:6: error: ‘PQescapeString’ undeclared (first use in this function)
-conftest.c:6: error: (Each undeclared identifier is reported only once
-conftest.c:6: error: for each function it appears in.)
+conftest.c:4: error: ‘PQescapeString’ undeclared (first use in this function)
+conftest.c:4: error: (Each undeclared identifier is reported only once
+conftest.c:4: error: for each function it appears in.)
 checked program was:
 /* begin */
-1: #include "ruby.h"
-2: 
-3: /*top*/
-4: int main(void) {return 0;}
-5: extern int t(void);
-6: int t(void) { void ((*volatile p)()); p = (void ((*)()))PQescapeString; return 0; }
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: int t() { void ((*volatile p)()); p = (void ((*)()))PQescapeString; return 0; }
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     printf("%p", &t);
+ 9:   }
+10: 
+11:   return 0;
+12: }
 /* end */
 
-"gcc-4.2 -o conftest -I/Users/spencerbard/.rbenv/versions/2.0.0-p0/include/ruby-2.0.0/x86_64-darwin12.2.1 -I/Users/spencerbard/.rbenv/versions/2.0.0-p0/include/ruby-2.0.0/ruby/backward -I/Users/spencerbard/.rbenv/versions/2.0.0-p0/include/ruby-2.0.0 -I. -I'/Users/spencerbard/.rbenv/versions/2.0.0-p0/include'  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -I/usr/include   -Wno-error=shorten-64-to-32 -pipe conftest.c  -L. -L/Users/spencerbard/.rbenv/versions/2.0.0-p0/lib -L. -L'/Users/spencerbard/.rbenv/versions/2.0.0-p0/lib'  -L/usr/lib    -lpq  -lruby-static -lpq  -lpthread -ldl -lobjc "
+"/usr/local/bin/gcc-4.2 -o conftest -I/Users/spencerbard/.rvm/rubies/ruby-1.9.3-p448/include/ruby-1.9.1/x86_64-darwin12.4.0 -I/Users/spencerbard/.rvm/rubies/ruby-1.9.3-p448/include/ruby-1.9.1/ruby/backward -I/Users/spencerbard/.rvm/rubies/ruby-1.9.3-p448/include/ruby-1.9.1 -I. -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -I/Users/spencerbard/.rvm/opt/libyaml/include -I/Users/spencerbard/.rvm/opt/readline/include -I/Users/spencerbard/.rvm/opt/libksba/include -I/Users/spencerbard/.rvm/opt/openssl/include -I/usr/include  -O3 -ggdb -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wshorten-64-to-32 -Wimplicit-function-declaration  -fno-common -pipe conftest.c  -L. -L/Users/spencerbard/.rvm/rubies/ruby-1.9.3-p448/lib -L/Users/spencerbard/.rvm/opt/libyaml/lib -L/Users/spencerbard/.rvm/opt/readline/lib -L/Users/spencerbard/.rvm/opt/libksba/lib -L/Users/spencerbard/.rvm/opt/openssl/lib -L.  -L/Users/spencerbard/.rvm/opt/libyaml/lib -L/Users/spencerbard/.rvm/opt/readline/lib -L/Users/spencerbard/.rvm/opt/libksba/lib -L/Users/spencerbard/.rvm/opt/openssl/lib  -L/usr/lib    -lpq  -lruby.1.9.1 -lpq  -lpthread -ldl -lobjc "
+conftest.c: In function ‘t’:
+conftest.c:4: warning: implicit declaration of function ‘PQescapeString’
 checked program was:
 /* begin */
-1: #include "ruby.h"
-2: 
-3: /*top*/
-4: int main(void) {return 0;}
-5: extern int t(void);
-6: int t(void) { PQescapeString(); return 0; }
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: int t() { PQescapeString(); return 0; }
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     printf("%p", &t);
+ 9:   }
+10: 
+11:   return 0;
+12: }
 /* end */
 
 --------------------
 
 have_func: checking for PQescapeStringConn()... -------------------- yes
 
-"gcc-4.2 -o conftest -I/Users/spencerbard/.rbenv/versions/2.0.0-p0/include/ruby-2.0.0/x86_64-darwin12.2.1 -I/Users/spencerbard/.rbenv/versions/2.0.0-p0/include/ruby-2.0.0/ruby/backward -I/Users/spencerbard/.rbenv/versions/2.0.0-p0/include/ruby-2.0.0 -I. -I'/Users/spencerbard/.rbenv/versions/2.0.0-p0/include'  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -I/usr/include   -Wno-error=shorten-64-to-32 -pipe conftest.c  -L. -L/Users/spencerbard/.rbenv/versions/2.0.0-p0/lib -L. -L'/Users/spencerbard/.rbenv/versions/2.0.0-p0/lib'  -L/usr/lib    -lpq  -lruby-static -lpq  -lpthread -ldl -lobjc "
+"/usr/local/bin/gcc-4.2 -o conftest -I/Users/spencerbard/.rvm/rubies/ruby-1.9.3-p448/include/ruby-1.9.1/x86_64-darwin12.4.0 -I/Users/spencerbard/.rvm/rubies/ruby-1.9.3-p448/include/ruby-1.9.1/ruby/backward -I/Users/spencerbard/.rvm/rubies/ruby-1.9.3-p448/include/ruby-1.9.1 -I. -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -I/Users/spencerbard/.rvm/opt/libyaml/include -I/Users/spencerbard/.rvm/opt/readline/include -I/Users/spencerbard/.rvm/opt/libksba/include -I/Users/spencerbard/.rvm/opt/openssl/include -I/usr/include  -O3 -ggdb -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wshorten-64-to-32 -Wimplicit-function-declaration  -fno-common -pipe conftest.c  -L. -L/Users/spencerbard/.rvm/rubies/ruby-1.9.3-p448/lib -L/Users/spencerbard/.rvm/opt/libyaml/lib -L/Users/spencerbard/.rvm/opt/readline/lib -L/Users/spencerbard/.rvm/opt/libksba/lib -L/Users/spencerbard/.rvm/opt/openssl/lib -L.  -L/Users/spencerbard/.rvm/opt/libyaml/lib -L/Users/spencerbard/.rvm/opt/readline/lib -L/Users/spencerbard/.rvm/opt/libksba/lib -L/Users/spencerbard/.rvm/opt/openssl/lib  -L/usr/lib    -lpq  -lruby.1.9.1 -lpq  -lpthread -ldl -lobjc "
 conftest.c: In function ‘t’:
-conftest.c:6: error: ‘PQescapeStringConn’ undeclared (first use in this function)
-conftest.c:6: error: (Each undeclared identifier is reported only once
-conftest.c:6: error: for each function it appears in.)
+conftest.c:4: error: ‘PQescapeStringConn’ undeclared (first use in this function)
+conftest.c:4: error: (Each undeclared identifier is reported only once
+conftest.c:4: error: for each function it appears in.)
 checked program was:
 /* begin */
-1: #include "ruby.h"
-2: 
-3: /*top*/
-4: int main(void) {return 0;}
-5: extern int t(void);
-6: int t(void) { void ((*volatile p)()); p = (void ((*)()))PQescapeStringConn; return 0; }
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: int t() { void ((*volatile p)()); p = (void ((*)()))PQescapeStringConn; return 0; }
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     printf("%p", &t);
+ 9:   }
+10: 
+11:   return 0;
+12: }
 /* end */
 
-"gcc-4.2 -o conftest -I/Users/spencerbard/.rbenv/versions/2.0.0-p0/include/ruby-2.0.0/x86_64-darwin12.2.1 -I/Users/spencerbard/.rbenv/versions/2.0.0-p0/include/ruby-2.0.0/ruby/backward -I/Users/spencerbard/.rbenv/versions/2.0.0-p0/include/ruby-2.0.0 -I. -I'/Users/spencerbard/.rbenv/versions/2.0.0-p0/include'  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -I/usr/include   -Wno-error=shorten-64-to-32 -pipe conftest.c  -L. -L/Users/spencerbard/.rbenv/versions/2.0.0-p0/lib -L. -L'/Users/spencerbard/.rbenv/versions/2.0.0-p0/lib'  -L/usr/lib    -lpq  -lruby-static -lpq  -lpthread -ldl -lobjc "
+"/usr/local/bin/gcc-4.2 -o conftest -I/Users/spencerbard/.rvm/rubies/ruby-1.9.3-p448/include/ruby-1.9.1/x86_64-darwin12.4.0 -I/Users/spencerbard/.rvm/rubies/ruby-1.9.3-p448/include/ruby-1.9.1/ruby/backward -I/Users/spencerbard/.rvm/rubies/ruby-1.9.3-p448/include/ruby-1.9.1 -I. -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -I/Users/spencerbard/.rvm/opt/libyaml/include -I/Users/spencerbard/.rvm/opt/readline/include -I/Users/spencerbard/.rvm/opt/libksba/include -I/Users/spencerbard/.rvm/opt/openssl/include -I/usr/include  -O3 -ggdb -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wshorten-64-to-32 -Wimplicit-function-declaration  -fno-common -pipe conftest.c  -L. -L/Users/spencerbard/.rvm/rubies/ruby-1.9.3-p448/lib -L/Users/spencerbard/.rvm/opt/libyaml/lib -L/Users/spencerbard/.rvm/opt/readline/lib -L/Users/spencerbard/.rvm/opt/libksba/lib -L/Users/spencerbard/.rvm/opt/openssl/lib -L.  -L/Users/spencerbard/.rvm/opt/libyaml/lib -L/Users/spencerbard/.rvm/opt/readline/lib -L/Users/spencerbard/.rvm/opt/libksba/lib -L/Users/spencerbard/.rvm/opt/openssl/lib  -L/usr/lib    -lpq  -lruby.1.9.1 -lpq  -lpthread -ldl -lobjc "
+conftest.c: In function ‘t’:
+conftest.c:4: warning: implicit declaration of function ‘PQescapeStringConn’
 checked program was:
 /* begin */
-1: #include "ruby.h"
-2: 
-3: /*top*/
-4: int main(void) {return 0;}
-5: extern int t(void);
-6: int t(void) { PQescapeStringConn(); return 0; }
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: int t() { PQescapeStringConn(); return 0; }
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     printf("%p", &t);
+ 9:   }
+10: 
+11:   return 0;
+12: }
 /* end */
 
 --------------------
 
 have_func: checking for PQgetCancel()... -------------------- yes
 
-"gcc-4.2 -o conftest -I/Users/spencerbard/.rbenv/versions/2.0.0-p0/include/ruby-2.0.0/x86_64-darwin12.2.1 -I/Users/spencerbard/.rbenv/versions/2.0.0-p0/include/ruby-2.0.0/ruby/backward -I/Users/spencerbard/.rbenv/versions/2.0.0-p0/include/ruby-2.0.0 -I. -I'/Users/spencerbard/.rbenv/versions/2.0.0-p0/include'  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -I/usr/include   -Wno-error=shorten-64-to-32 -pipe conftest.c  -L. -L/Users/spencerbard/.rbenv/versions/2.0.0-p0/lib -L. -L'/Users/spencerbard/.rbenv/versions/2.0.0-p0/lib'  -L/usr/lib    -lpq  -lruby-static -lpq  -lpthread -ldl -lobjc "
+"/usr/local/bin/gcc-4.2 -o conftest -I/Users/spencerbard/.rvm/rubies/ruby-1.9.3-p448/include/ruby-1.9.1/x86_64-darwin12.4.0 -I/Users/spencerbard/.rvm/rubies/ruby-1.9.3-p448/include/ruby-1.9.1/ruby/backward -I/Users/spencerbard/.rvm/rubies/ruby-1.9.3-p448/include/ruby-1.9.1 -I. -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -I/Users/spencerbard/.rvm/opt/libyaml/include -I/Users/spencerbard/.rvm/opt/readline/include -I/Users/spencerbard/.rvm/opt/libksba/include -I/Users/spencerbard/.rvm/opt/openssl/include -I/usr/include  -O3 -ggdb -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wshorten-64-to-32 -Wimplicit-function-declaration  -fno-common -pipe conftest.c  -L. -L/Users/spencerbard/.rvm/rubies/ruby-1.9.3-p448/lib -L/Users/spencerbard/.rvm/opt/libyaml/lib -L/Users/spencerbard/.rvm/opt/readline/lib -L/Users/spencerbard/.rvm/opt/libksba/lib -L/Users/spencerbard/.rvm/opt/openssl/lib -L.  -L/Users/spencerbard/.rvm/opt/libyaml/lib -L/Users/spencerbard/.rvm/opt/readline/lib -L/Users/spencerbard/.rvm/opt/libksba/lib -L/Users/spencerbard/.rvm/opt/openssl/lib  -L/usr/lib    -lpq  -lruby.1.9.1 -lpq  -lpthread -ldl -lobjc "
 conftest.c: In function ‘t’:
-conftest.c:6: error: ‘PQgetCancel’ undeclared (first use in this function)
-conftest.c:6: error: (Each undeclared identifier is reported only once
-conftest.c:6: error: for each function it appears in.)
+conftest.c:4: error: ‘PQgetCancel’ undeclared (first use in this function)
+conftest.c:4: error: (Each undeclared identifier is reported only once
+conftest.c:4: error: for each function it appears in.)
 checked program was:
 /* begin */
-1: #include "ruby.h"
-2: 
-3: /*top*/
-4: int main(void) {return 0;}
-5: extern int t(void);
-6: int t(void) { void ((*volatile p)()); p = (void ((*)()))PQgetCancel; return 0; }
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: int t() { void ((*volatile p)()); p = (void ((*)()))PQgetCancel; return 0; }
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     printf("%p", &t);
+ 9:   }
+10: 
+11:   return 0;
+12: }
 /* end */
 
-"gcc-4.2 -o conftest -I/Users/spencerbard/.rbenv/versions/2.0.0-p0/include/ruby-2.0.0/x86_64-darwin12.2.1 -I/Users/spencerbard/.rbenv/versions/2.0.0-p0/include/ruby-2.0.0/ruby/backward -I/Users/spencerbard/.rbenv/versions/2.0.0-p0/include/ruby-2.0.0 -I. -I'/Users/spencerbard/.rbenv/versions/2.0.0-p0/include'  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -I/usr/include   -Wno-error=shorten-64-to-32 -pipe conftest.c  -L. -L/Users/spencerbard/.rbenv/versions/2.0.0-p0/lib -L. -L'/Users/spencerbard/.rbenv/versions/2.0.0-p0/lib'  -L/usr/lib    -lpq  -lruby-static -lpq  -lpthread -ldl -lobjc "
+"/usr/local/bin/gcc-4.2 -o conftest -I/Users/spencerbard/.rvm/rubies/ruby-1.9.3-p448/include/ruby-1.9.1/x86_64-darwin12.4.0 -I/Users/spencerbard/.rvm/rubies/ruby-1.9.3-p448/include/ruby-1.9.1/ruby/backward -I/Users/spencerbard/.rvm/rubies/ruby-1.9.3-p448/include/ruby-1.9.1 -I. -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -I/Users/spencerbard/.rvm/opt/libyaml/include -I/Users/spencerbard/.rvm/opt/readline/include -I/Users/spencerbard/.rvm/opt/libksba/include -I/Users/spencerbard/.rvm/opt/openssl/include -I/usr/include  -O3 -ggdb -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wshorten-64-to-32 -Wimplicit-function-declaration  -fno-common -pipe conftest.c  -L. -L/Users/spencerbard/.rvm/rubies/ruby-1.9.3-p448/lib -L/Users/spencerbard/.rvm/opt/libyaml/lib -L/Users/spencerbard/.rvm/opt/readline/lib -L/Users/spencerbard/.rvm/opt/libksba/lib -L/Users/spencerbard/.rvm/opt/openssl/lib -L.  -L/Users/spencerbard/.rvm/opt/libyaml/lib -L/Users/spencerbard/.rvm/opt/readline/lib -L/Users/spencerbard/.rvm/opt/libksba/lib -L/Users/spencerbard/.rvm/opt/openssl/lib  -L/usr/lib    -lpq  -lruby.1.9.1 -lpq  -lpthread -ldl -lobjc "
+conftest.c: In function ‘t’:
+conftest.c:4: warning: implicit declaration of function ‘PQgetCancel’
 checked program was:
 /* begin */
-1: #include "ruby.h"
-2: 
-3: /*top*/
-4: int main(void) {return 0;}
-5: extern int t(void);
-6: int t(void) { PQgetCancel(); return 0; }
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: int t() { PQgetCancel(); return 0; }
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     printf("%p", &t);
+ 9:   }
+10: 
+11:   return 0;
+12: }
 /* end */
 
 --------------------
 
 have_func: checking for lo_create()... -------------------- yes
 
-"gcc-4.2 -o conftest -I/Users/spencerbard/.rbenv/versions/2.0.0-p0/include/ruby-2.0.0/x86_64-darwin12.2.1 -I/Users/spencerbard/.rbenv/versions/2.0.0-p0/include/ruby-2.0.0/ruby/backward -I/Users/spencerbard/.rbenv/versions/2.0.0-p0/include/ruby-2.0.0 -I. -I'/Users/spencerbard/.rbenv/versions/2.0.0-p0/include'  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -I/usr/include   -Wno-error=shorten-64-to-32 -pipe conftest.c  -L. -L/Users/spencerbard/.rbenv/versions/2.0.0-p0/lib -L. -L'/Users/spencerbard/.rbenv/versions/2.0.0-p0/lib'  -L/usr/lib    -lpq  -lruby-static -lpq  -lpthread -ldl -lobjc "
+"/usr/local/bin/gcc-4.2 -o conftest -I/Users/spencerbard/.rvm/rubies/ruby-1.9.3-p448/include/ruby-1.9.1/x86_64-darwin12.4.0 -I/Users/spencerbard/.rvm/rubies/ruby-1.9.3-p448/include/ruby-1.9.1/ruby/backward -I/Users/spencerbard/.rvm/rubies/ruby-1.9.3-p448/include/ruby-1.9.1 -I. -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -I/Users/spencerbard/.rvm/opt/libyaml/include -I/Users/spencerbard/.rvm/opt/readline/include -I/Users/spencerbard/.rvm/opt/libksba/include -I/Users/spencerbard/.rvm/opt/openssl/include -I/usr/include  -O3 -ggdb -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wshorten-64-to-32 -Wimplicit-function-declaration  -fno-common -pipe conftest.c  -L. -L/Users/spencerbard/.rvm/rubies/ruby-1.9.3-p448/lib -L/Users/spencerbard/.rvm/opt/libyaml/lib -L/Users/spencerbard/.rvm/opt/readline/lib -L/Users/spencerbard/.rvm/opt/libksba/lib -L/Users/spencerbard/.rvm/opt/openssl/lib -L.  -L/Users/spencerbard/.rvm/opt/libyaml/lib -L/Users/spencerbard/.rvm/opt/readline/lib -L/Users/spencerbard/.rvm/opt/libksba/lib -L/Users/spencerbard/.rvm/opt/openssl/lib  -L/usr/lib    -lpq  -lruby.1.9.1 -lpq  -lpthread -ldl -lobjc "
 conftest.c: In function ‘t’:
-conftest.c:6: error: ‘lo_create’ undeclared (first use in this function)
-conftest.c:6: error: (Each undeclared identifier is reported only once
-conftest.c:6: error: for each function it appears in.)
+conftest.c:4: error: ‘lo_create’ undeclared (first use in this function)
+conftest.c:4: error: (Each undeclared identifier is reported only once
+conftest.c:4: error: for each function it appears in.)
 checked program was:
 /* begin */
-1: #include "ruby.h"
-2: 
-3: /*top*/
-4: int main(void) {return 0;}
-5: extern int t(void);
-6: int t(void) { void ((*volatile p)()); p = (void ((*)()))lo_create; return 0; }
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: int t() { void ((*volatile p)()); p = (void ((*)()))lo_create; return 0; }
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     printf("%p", &t);
+ 9:   }
+10: 
+11:   return 0;
+12: }
 /* end */
 
-"gcc-4.2 -o conftest -I/Users/spencerbard/.rbenv/versions/2.0.0-p0/include/ruby-2.0.0/x86_64-darwin12.2.1 -I/Users/spencerbard/.rbenv/versions/2.0.0-p0/include/ruby-2.0.0/ruby/backward -I/Users/spencerbard/.rbenv/versions/2.0.0-p0/include/ruby-2.0.0 -I. -I'/Users/spencerbard/.rbenv/versions/2.0.0-p0/include'  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -I/usr/include   -Wno-error=shorten-64-to-32 -pipe conftest.c  -L. -L/Users/spencerbard/.rbenv/versions/2.0.0-p0/lib -L. -L'/Users/spencerbard/.rbenv/versions/2.0.0-p0/lib'  -L/usr/lib    -lpq  -lruby-static -lpq  -lpthread -ldl -lobjc "
+"/usr/local/bin/gcc-4.2 -o conftest -I/Users/spencerbard/.rvm/rubies/ruby-1.9.3-p448/include/ruby-1.9.1/x86_64-darwin12.4.0 -I/Users/spencerbard/.rvm/rubies/ruby-1.9.3-p448/include/ruby-1.9.1/ruby/backward -I/Users/spencerbard/.rvm/rubies/ruby-1.9.3-p448/include/ruby-1.9.1 -I. -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -I/Users/spencerbard/.rvm/opt/libyaml/include -I/Users/spencerbard/.rvm/opt/readline/include -I/Users/spencerbard/.rvm/opt/libksba/include -I/Users/spencerbard/.rvm/opt/openssl/include -I/usr/include  -O3 -ggdb -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wshorten-64-to-32 -Wimplicit-function-declaration  -fno-common -pipe conftest.c  -L. -L/Users/spencerbard/.rvm/rubies/ruby-1.9.3-p448/lib -L/Users/spencerbard/.rvm/opt/libyaml/lib -L/Users/spencerbard/.rvm/opt/readline/lib -L/Users/spencerbard/.rvm/opt/libksba/lib -L/Users/spencerbard/.rvm/opt/openssl/lib -L.  -L/Users/spencerbard/.rvm/opt/libyaml/lib -L/Users/spencerbard/.rvm/opt/readline/lib -L/Users/spencerbard/.rvm/opt/libksba/lib -L/Users/spencerbard/.rvm/opt/openssl/lib  -L/usr/lib    -lpq  -lruby.1.9.1 -lpq  -lpthread -ldl -lobjc "
+conftest.c: In function ‘t’:
+conftest.c:4: warning: implicit declaration of function ‘lo_create’
 checked program was:
 /* begin */
-1: #include "ruby.h"
-2: 
-3: /*top*/
-4: int main(void) {return 0;}
-5: extern int t(void);
-6: int t(void) { lo_create(); return 0; }
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: int t() { lo_create(); return 0; }
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     printf("%p", &t);
+ 9:   }
+10: 
+11:   return 0;
+12: }
 /* end */
 
 --------------------
 
 have_func: checking for pg_encoding_to_char()... -------------------- yes
 
-"gcc-4.2 -o conftest -I/Users/spencerbard/.rbenv/versions/2.0.0-p0/include/ruby-2.0.0/x86_64-darwin12.2.1 -I/Users/spencerbard/.rbenv/versions/2.0.0-p0/include/ruby-2.0.0/ruby/backward -I/Users/spencerbard/.rbenv/versions/2.0.0-p0/include/ruby-2.0.0 -I. -I'/Users/spencerbard/.rbenv/versions/2.0.0-p0/include'  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -I/usr/include   -Wno-error=shorten-64-to-32 -pipe conftest.c  -L. -L/Users/spencerbard/.rbenv/versions/2.0.0-p0/lib -L. -L'/Users/spencerbard/.rbenv/versions/2.0.0-p0/lib'  -L/usr/lib    -lpq  -lruby-static -lpq  -lpthread -ldl -lobjc "
+"/usr/local/bin/gcc-4.2 -o conftest -I/Users/spencerbard/.rvm/rubies/ruby-1.9.3-p448/include/ruby-1.9.1/x86_64-darwin12.4.0 -I/Users/spencerbard/.rvm/rubies/ruby-1.9.3-p448/include/ruby-1.9.1/ruby/backward -I/Users/spencerbard/.rvm/rubies/ruby-1.9.3-p448/include/ruby-1.9.1 -I. -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -I/Users/spencerbard/.rvm/opt/libyaml/include -I/Users/spencerbard/.rvm/opt/readline/include -I/Users/spencerbard/.rvm/opt/libksba/include -I/Users/spencerbard/.rvm/opt/openssl/include -I/usr/include  -O3 -ggdb -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wshorten-64-to-32 -Wimplicit-function-declaration  -fno-common -pipe conftest.c  -L. -L/Users/spencerbard/.rvm/rubies/ruby-1.9.3-p448/lib -L/Users/spencerbard/.rvm/opt/libyaml/lib -L/Users/spencerbard/.rvm/opt/readline/lib -L/Users/spencerbard/.rvm/opt/libksba/lib -L/Users/spencerbard/.rvm/opt/openssl/lib -L.  -L/Users/spencerbard/.rvm/opt/libyaml/lib -L/Users/spencerbard/.rvm/opt/readline/lib -L/Users/spencerbard/.rvm/opt/libksba/lib -L/Users/spencerbard/.rvm/opt/openssl/lib  -L/usr/lib    -lpq  -lruby.1.9.1 -lpq  -lpthread -ldl -lobjc "
 conftest.c: In function ‘t’:
-conftest.c:6: error: ‘pg_encoding_to_char’ undeclared (first use in this function)
-conftest.c:6: error: (Each undeclared identifier is reported only once
-conftest.c:6: error: for each function it appears in.)
+conftest.c:4: error: ‘pg_encoding_to_char’ undeclared (first use in this function)
+conftest.c:4: error: (Each undeclared identifier is reported only once
+conftest.c:4: error: for each function it appears in.)
 checked program was:
 /* begin */
-1: #include "ruby.h"
-2: 
-3: /*top*/
-4: int main(void) {return 0;}
-5: extern int t(void);
-6: int t(void) { void ((*volatile p)()); p = (void ((*)()))pg_encoding_to_char; return 0; }
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: int t() { void ((*volatile p)()); p = (void ((*)()))pg_encoding_to_char; return 0; }
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     printf("%p", &t);
+ 9:   }
+10: 
+11:   return 0;
+12: }
 /* end */
 
-"gcc-4.2 -o conftest -I/Users/spencerbard/.rbenv/versions/2.0.0-p0/include/ruby-2.0.0/x86_64-darwin12.2.1 -I/Users/spencerbard/.rbenv/versions/2.0.0-p0/include/ruby-2.0.0/ruby/backward -I/Users/spencerbard/.rbenv/versions/2.0.0-p0/include/ruby-2.0.0 -I. -I'/Users/spencerbard/.rbenv/versions/2.0.0-p0/include'  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -I/usr/include   -Wno-error=shorten-64-to-32 -pipe conftest.c  -L. -L/Users/spencerbard/.rbenv/versions/2.0.0-p0/lib -L. -L'/Users/spencerbard/.rbenv/versions/2.0.0-p0/lib'  -L/usr/lib    -lpq  -lruby-static -lpq  -lpthread -ldl -lobjc "
+"/usr/local/bin/gcc-4.2 -o conftest -I/Users/spencerbard/.rvm/rubies/ruby-1.9.3-p448/include/ruby-1.9.1/x86_64-darwin12.4.0 -I/Users/spencerbard/.rvm/rubies/ruby-1.9.3-p448/include/ruby-1.9.1/ruby/backward -I/Users/spencerbard/.rvm/rubies/ruby-1.9.3-p448/include/ruby-1.9.1 -I. -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -I/Users/spencerbard/.rvm/opt/libyaml/include -I/Users/spencerbard/.rvm/opt/readline/include -I/Users/spencerbard/.rvm/opt/libksba/include -I/Users/spencerbard/.rvm/opt/openssl/include -I/usr/include  -O3 -ggdb -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wshorten-64-to-32 -Wimplicit-function-declaration  -fno-common -pipe conftest.c  -L. -L/Users/spencerbard/.rvm/rubies/ruby-1.9.3-p448/lib -L/Users/spencerbard/.rvm/opt/libyaml/lib -L/Users/spencerbard/.rvm/opt/readline/lib -L/Users/spencerbard/.rvm/opt/libksba/lib -L/Users/spencerbard/.rvm/opt/openssl/lib -L.  -L/Users/spencerbard/.rvm/opt/libyaml/lib -L/Users/spencerbard/.rvm/opt/readline/lib -L/Users/spencerbard/.rvm/opt/libksba/lib -L/Users/spencerbard/.rvm/opt/openssl/lib  -L/usr/lib    -lpq  -lruby.1.9.1 -lpq  -lpthread -ldl -lobjc "
+conftest.c: In function ‘t’:
+conftest.c:4: warning: implicit declaration of function ‘pg_encoding_to_char’
 checked program was:
 /* begin */
-1: #include "ruby.h"
-2: 
-3: /*top*/
-4: int main(void) {return 0;}
-5: extern int t(void);
-6: int t(void) { pg_encoding_to_char(); return 0; }
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: int t() { pg_encoding_to_char(); return 0; }
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     printf("%p", &t);
+ 9:   }
+10: 
+11:   return 0;
+12: }
 /* end */
 
 --------------------
 
 have_func: checking for PQsetClientEncoding()... -------------------- yes
 
-"gcc-4.2 -o conftest -I/Users/spencerbard/.rbenv/versions/2.0.0-p0/include/ruby-2.0.0/x86_64-darwin12.2.1 -I/Users/spencerbard/.rbenv/versions/2.0.0-p0/include/ruby-2.0.0/ruby/backward -I/Users/spencerbard/.rbenv/versions/2.0.0-p0/include/ruby-2.0.0 -I. -I'/Users/spencerbard/.rbenv/versions/2.0.0-p0/include'  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -I/usr/include   -Wno-error=shorten-64-to-32 -pipe conftest.c  -L. -L/Users/spencerbard/.rbenv/versions/2.0.0-p0/lib -L. -L'/Users/spencerbard/.rbenv/versions/2.0.0-p0/lib'  -L/usr/lib    -lpq  -lruby-static -lpq  -lpthread -ldl -lobjc "
+"/usr/local/bin/gcc-4.2 -o conftest -I/Users/spencerbard/.rvm/rubies/ruby-1.9.3-p448/include/ruby-1.9.1/x86_64-darwin12.4.0 -I/Users/spencerbard/.rvm/rubies/ruby-1.9.3-p448/include/ruby-1.9.1/ruby/backward -I/Users/spencerbard/.rvm/rubies/ruby-1.9.3-p448/include/ruby-1.9.1 -I. -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -I/Users/spencerbard/.rvm/opt/libyaml/include -I/Users/spencerbard/.rvm/opt/readline/include -I/Users/spencerbard/.rvm/opt/libksba/include -I/Users/spencerbard/.rvm/opt/openssl/include -I/usr/include  -O3 -ggdb -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wshorten-64-to-32 -Wimplicit-function-declaration  -fno-common -pipe conftest.c  -L. -L/Users/spencerbard/.rvm/rubies/ruby-1.9.3-p448/lib -L/Users/spencerbard/.rvm/opt/libyaml/lib -L/Users/spencerbard/.rvm/opt/readline/lib -L/Users/spencerbard/.rvm/opt/libksba/lib -L/Users/spencerbard/.rvm/opt/openssl/lib -L.  -L/Users/spencerbard/.rvm/opt/libyaml/lib -L/Users/spencerbard/.rvm/opt/readline/lib -L/Users/spencerbard/.rvm/opt/libksba/lib -L/Users/spencerbard/.rvm/opt/openssl/lib  -L/usr/lib    -lpq  -lruby.1.9.1 -lpq  -lpthread -ldl -lobjc "
 conftest.c: In function ‘t’:
-conftest.c:6: error: ‘PQsetClientEncoding’ undeclared (first use in this function)
-conftest.c:6: error: (Each undeclared identifier is reported only once
-conftest.c:6: error: for each function it appears in.)
+conftest.c:4: error: ‘PQsetClientEncoding’ undeclared (first use in this function)
+conftest.c:4: error: (Each undeclared identifier is reported only once
+conftest.c:4: error: for each function it appears in.)
 checked program was:
 /* begin */
-1: #include "ruby.h"
-2: 
-3: /*top*/
-4: int main(void) {return 0;}
-5: extern int t(void);
-6: int t(void) { void ((*volatile p)()); p = (void ((*)()))PQsetClientEncoding; return 0; }
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: int t() { void ((*volatile p)()); p = (void ((*)()))PQsetClientEncoding; return 0; }
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     printf("%p", &t);
+ 9:   }
+10: 
+11:   return 0;
+12: }
 /* end */
 
-"gcc-4.2 -o conftest -I/Users/spencerbard/.rbenv/versions/2.0.0-p0/include/ruby-2.0.0/x86_64-darwin12.2.1 -I/Users/spencerbard/.rbenv/versions/2.0.0-p0/include/ruby-2.0.0/ruby/backward -I/Users/spencerbard/.rbenv/versions/2.0.0-p0/include/ruby-2.0.0 -I. -I'/Users/spencerbard/.rbenv/versions/2.0.0-p0/include'  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -I/usr/include   -Wno-error=shorten-64-to-32 -pipe conftest.c  -L. -L/Users/spencerbard/.rbenv/versions/2.0.0-p0/lib -L. -L'/Users/spencerbard/.rbenv/versions/2.0.0-p0/lib'  -L/usr/lib    -lpq  -lruby-static -lpq  -lpthread -ldl -lobjc "
+"/usr/local/bin/gcc-4.2 -o conftest -I/Users/spencerbard/.rvm/rubies/ruby-1.9.3-p448/include/ruby-1.9.1/x86_64-darwin12.4.0 -I/Users/spencerbard/.rvm/rubies/ruby-1.9.3-p448/include/ruby-1.9.1/ruby/backward -I/Users/spencerbard/.rvm/rubies/ruby-1.9.3-p448/include/ruby-1.9.1 -I. -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -I/Users/spencerbard/.rvm/opt/libyaml/include -I/Users/spencerbard/.rvm/opt/readline/include -I/Users/spencerbard/.rvm/opt/libksba/include -I/Users/spencerbard/.rvm/opt/openssl/include -I/usr/include  -O3 -ggdb -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wshorten-64-to-32 -Wimplicit-function-declaration  -fno-common -pipe conftest.c  -L. -L/Users/spencerbard/.rvm/rubies/ruby-1.9.3-p448/lib -L/Users/spencerbard/.rvm/opt/libyaml/lib -L/Users/spencerbard/.rvm/opt/readline/lib -L/Users/spencerbard/.rvm/opt/libksba/lib -L/Users/spencerbard/.rvm/opt/openssl/lib -L.  -L/Users/spencerbard/.rvm/opt/libyaml/lib -L/Users/spencerbard/.rvm/opt/readline/lib -L/Users/spencerbard/.rvm/opt/libksba/lib -L/Users/spencerbard/.rvm/opt/openssl/lib  -L/usr/lib    -lpq  -lruby.1.9.1 -lpq  -lpthread -ldl -lobjc "
+conftest.c: In function ‘t’:
+conftest.c:4: warning: implicit declaration of function ‘PQsetClientEncoding’
 checked program was:
 /* begin */
-1: #include "ruby.h"
-2: 
-3: /*top*/
-4: int main(void) {return 0;}
-5: extern int t(void);
-6: int t(void) { PQsetClientEncoding(); return 0; }
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: int t() { PQsetClientEncoding(); return 0; }
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     printf("%p", &t);
+ 9:   }
+10: 
+11:   return 0;
+12: }
 /* end */
 
 --------------------
 
 have_func: checking for rb_encdb_alias()... -------------------- yes
 
-"gcc-4.2 -o conftest -I/Users/spencerbard/.rbenv/versions/2.0.0-p0/include/ruby-2.0.0/x86_64-darwin12.2.1 -I/Users/spencerbard/.rbenv/versions/2.0.0-p0/include/ruby-2.0.0/ruby/backward -I/Users/spencerbard/.rbenv/versions/2.0.0-p0/include/ruby-2.0.0 -I. -I'/Users/spencerbard/.rbenv/versions/2.0.0-p0/include'  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -I/usr/include   -Wno-error=shorten-64-to-32 -pipe conftest.c  -L. -L/Users/spencerbard/.rbenv/versions/2.0.0-p0/lib -L. -L'/Users/spencerbard/.rbenv/versions/2.0.0-p0/lib'  -L/usr/lib    -lpq  -lruby-static -lpq  -lpthread -ldl -lobjc "
+"/usr/local/bin/gcc-4.2 -o conftest -I/Users/spencerbard/.rvm/rubies/ruby-1.9.3-p448/include/ruby-1.9.1/x86_64-darwin12.4.0 -I/Users/spencerbard/.rvm/rubies/ruby-1.9.3-p448/include/ruby-1.9.1/ruby/backward -I/Users/spencerbard/.rvm/rubies/ruby-1.9.3-p448/include/ruby-1.9.1 -I. -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -I/Users/spencerbard/.rvm/opt/libyaml/include -I/Users/spencerbard/.rvm/opt/readline/include -I/Users/spencerbard/.rvm/opt/libksba/include -I/Users/spencerbard/.rvm/opt/openssl/include -I/usr/include  -O3 -ggdb -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wshorten-64-to-32 -Wimplicit-function-declaration  -fno-common -pipe conftest.c  -L. -L/Users/spencerbard/.rvm/rubies/ruby-1.9.3-p448/lib -L/Users/spencerbard/.rvm/opt/libyaml/lib -L/Users/spencerbard/.rvm/opt/readline/lib -L/Users/spencerbard/.rvm/opt/libksba/lib -L/Users/spencerbard/.rvm/opt/openssl/lib -L.  -L/Users/spencerbard/.rvm/opt/libyaml/lib -L/Users/spencerbard/.rvm/opt/readline/lib -L/Users/spencerbard/.rvm/opt/libksba/lib -L/Users/spencerbard/.rvm/opt/openssl/lib  -L/usr/lib    -lpq  -lruby.1.9.1 -lpq  -lpthread -ldl -lobjc "
 conftest.c: In function ‘t’:
-conftest.c:6: error: ‘rb_encdb_alias’ undeclared (first use in this function)
-conftest.c:6: error: (Each undeclared identifier is reported only once
-conftest.c:6: error: for each function it appears in.)
+conftest.c:4: error: ‘rb_encdb_alias’ undeclared (first use in this function)
+conftest.c:4: error: (Each undeclared identifier is reported only once
+conftest.c:4: error: for each function it appears in.)
 checked program was:
 /* begin */
-1: #include "ruby.h"
-2: 
-3: /*top*/
-4: int main(void) {return 0;}
-5: extern int t(void);
-6: int t(void) { void ((*volatile p)()); p = (void ((*)()))rb_encdb_alias; return 0; }
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: int t() { void ((*volatile p)()); p = (void ((*)()))rb_encdb_alias; return 0; }
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     printf("%p", &t);
+ 9:   }
+10: 
+11:   return 0;
+12: }
 /* end */
 
-"gcc-4.2 -o conftest -I/Users/spencerbard/.rbenv/versions/2.0.0-p0/include/ruby-2.0.0/x86_64-darwin12.2.1 -I/Users/spencerbard/.rbenv/versions/2.0.0-p0/include/ruby-2.0.0/ruby/backward -I/Users/spencerbard/.rbenv/versions/2.0.0-p0/include/ruby-2.0.0 -I. -I'/Users/spencerbard/.rbenv/versions/2.0.0-p0/include'  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -I/usr/include   -Wno-error=shorten-64-to-32 -pipe conftest.c  -L. -L/Users/spencerbard/.rbenv/versions/2.0.0-p0/lib -L. -L'/Users/spencerbard/.rbenv/versions/2.0.0-p0/lib'  -L/usr/lib    -lpq  -lruby-static -lpq  -lpthread -ldl -lobjc "
+"/usr/local/bin/gcc-4.2 -o conftest -I/Users/spencerbard/.rvm/rubies/ruby-1.9.3-p448/include/ruby-1.9.1/x86_64-darwin12.4.0 -I/Users/spencerbard/.rvm/rubies/ruby-1.9.3-p448/include/ruby-1.9.1/ruby/backward -I/Users/spencerbard/.rvm/rubies/ruby-1.9.3-p448/include/ruby-1.9.1 -I. -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -I/Users/spencerbard/.rvm/opt/libyaml/include -I/Users/spencerbard/.rvm/opt/readline/include -I/Users/spencerbard/.rvm/opt/libksba/include -I/Users/spencerbard/.rvm/opt/openssl/include -I/usr/include  -O3 -ggdb -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wshorten-64-to-32 -Wimplicit-function-declaration  -fno-common -pipe conftest.c  -L. -L/Users/spencerbard/.rvm/rubies/ruby-1.9.3-p448/lib -L/Users/spencerbard/.rvm/opt/libyaml/lib -L/Users/spencerbard/.rvm/opt/readline/lib -L/Users/spencerbard/.rvm/opt/libksba/lib -L/Users/spencerbard/.rvm/opt/openssl/lib -L.  -L/Users/spencerbard/.rvm/opt/libyaml/lib -L/Users/spencerbard/.rvm/opt/readline/lib -L/Users/spencerbard/.rvm/opt/libksba/lib -L/Users/spencerbard/.rvm/opt/openssl/lib  -L/usr/lib    -lpq  -lruby.1.9.1 -lpq  -lpthread -ldl -lobjc "
+conftest.c: In function ‘t’:
+conftest.c:4: warning: implicit declaration of function ‘rb_encdb_alias’
 checked program was:
 /* begin */
-1: #include "ruby.h"
-2: 
-3: /*top*/
-4: int main(void) {return 0;}
-5: extern int t(void);
-6: int t(void) { rb_encdb_alias(); return 0; }
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: int t() { rb_encdb_alias(); return 0; }
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     printf("%p", &t);
+ 9:   }
+10: 
+11:   return 0;
+12: }
 /* end */
 
 --------------------
 
-have_func: checking for rb_enc_alias()... -------------------- yes
+have_func: checking for rb_enc_alias()... -------------------- no
 
-"gcc-4.2 -o conftest -I/Users/spencerbard/.rbenv/versions/2.0.0-p0/include/ruby-2.0.0/x86_64-darwin12.2.1 -I/Users/spencerbard/.rbenv/versions/2.0.0-p0/include/ruby-2.0.0/ruby/backward -I/Users/spencerbard/.rbenv/versions/2.0.0-p0/include/ruby-2.0.0 -I. -I'/Users/spencerbard/.rbenv/versions/2.0.0-p0/include'  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -I/usr/include   -Wno-error=shorten-64-to-32 -pipe conftest.c  -L. -L/Users/spencerbard/.rbenv/versions/2.0.0-p0/lib -L. -L'/Users/spencerbard/.rbenv/versions/2.0.0-p0/lib'  -L/usr/lib    -lpq  -lruby-static -lpq  -lpthread -ldl -lobjc "
+"/usr/local/bin/gcc-4.2 -o conftest -I/Users/spencerbard/.rvm/rubies/ruby-1.9.3-p448/include/ruby-1.9.1/x86_64-darwin12.4.0 -I/Users/spencerbard/.rvm/rubies/ruby-1.9.3-p448/include/ruby-1.9.1/ruby/backward -I/Users/spencerbard/.rvm/rubies/ruby-1.9.3-p448/include/ruby-1.9.1 -I. -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -I/Users/spencerbard/.rvm/opt/libyaml/include -I/Users/spencerbard/.rvm/opt/readline/include -I/Users/spencerbard/.rvm/opt/libksba/include -I/Users/spencerbard/.rvm/opt/openssl/include -I/usr/include  -O3 -ggdb -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wshorten-64-to-32 -Wimplicit-function-declaration  -fno-common -pipe conftest.c  -L. -L/Users/spencerbard/.rvm/rubies/ruby-1.9.3-p448/lib -L/Users/spencerbard/.rvm/opt/libyaml/lib -L/Users/spencerbard/.rvm/opt/readline/lib -L/Users/spencerbard/.rvm/opt/libksba/lib -L/Users/spencerbard/.rvm/opt/openssl/lib -L.  -L/Users/spencerbard/.rvm/opt/libyaml/lib -L/Users/spencerbard/.rvm/opt/readline/lib -L/Users/spencerbard/.rvm/opt/libksba/lib -L/Users/spencerbard/.rvm/opt/openssl/lib  -L/usr/lib    -lpq  -lruby.1.9.1 -lpq  -lpthread -ldl -lobjc "
 conftest.c: In function ‘t’:
-conftest.c:6: error: ‘rb_enc_alias’ undeclared (first use in this function)
-conftest.c:6: error: (Each undeclared identifier is reported only once
-conftest.c:6: error: for each function it appears in.)
+conftest.c:4: error: ‘rb_enc_alias’ undeclared (first use in this function)
+conftest.c:4: error: (Each undeclared identifier is reported only once
+conftest.c:4: error: for each function it appears in.)
 checked program was:
 /* begin */
-1: #include "ruby.h"
-2: 
-3: /*top*/
-4: int main(void) {return 0;}
-5: extern int t(void);
-6: int t(void) { void ((*volatile p)()); p = (void ((*)()))rb_enc_alias; return 0; }
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: int t() { void ((*volatile p)()); p = (void ((*)()))rb_enc_alias; return 0; }
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     printf("%p", &t);
+ 9:   }
+10: 
+11:   return 0;
+12: }
 /* end */
 
-"gcc-4.2 -o conftest -I/Users/spencerbard/.rbenv/versions/2.0.0-p0/include/ruby-2.0.0/x86_64-darwin12.2.1 -I/Users/spencerbard/.rbenv/versions/2.0.0-p0/include/ruby-2.0.0/ruby/backward -I/Users/spencerbard/.rbenv/versions/2.0.0-p0/include/ruby-2.0.0 -I. -I'/Users/spencerbard/.rbenv/versions/2.0.0-p0/include'  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -I/usr/include   -Wno-error=shorten-64-to-32 -pipe conftest.c  -L. -L/Users/spencerbard/.rbenv/versions/2.0.0-p0/lib -L. -L'/Users/spencerbard/.rbenv/versions/2.0.0-p0/lib'  -L/usr/lib    -lpq  -lruby-static -lpq  -lpthread -ldl -lobjc "
+"/usr/local/bin/gcc-4.2 -o conftest -I/Users/spencerbard/.rvm/rubies/ruby-1.9.3-p448/include/ruby-1.9.1/x86_64-darwin12.4.0 -I/Users/spencerbard/.rvm/rubies/ruby-1.9.3-p448/include/ruby-1.9.1/ruby/backward -I/Users/spencerbard/.rvm/rubies/ruby-1.9.3-p448/include/ruby-1.9.1 -I. -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -I/Users/spencerbard/.rvm/opt/libyaml/include -I/Users/spencerbard/.rvm/opt/readline/include -I/Users/spencerbard/.rvm/opt/libksba/include -I/Users/spencerbard/.rvm/opt/openssl/include -I/usr/include  -O3 -ggdb -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wshorten-64-to-32 -Wimplicit-function-declaration  -fno-common -pipe conftest.c  -L. -L/Users/spencerbard/.rvm/rubies/ruby-1.9.3-p448/lib -L/Users/spencerbard/.rvm/opt/libyaml/lib -L/Users/spencerbard/.rvm/opt/readline/lib -L/Users/spencerbard/.rvm/opt/libksba/lib -L/Users/spencerbard/.rvm/opt/openssl/lib -L.  -L/Users/spencerbard/.rvm/opt/libyaml/lib -L/Users/spencerbard/.rvm/opt/readline/lib -L/Users/spencerbard/.rvm/opt/libksba/lib -L/Users/spencerbard/.rvm/opt/openssl/lib  -L/usr/lib    -lpq  -lruby.1.9.1 -lpq  -lpthread -ldl -lobjc "
+conftest.c: In function ‘t’:
+conftest.c:4: warning: implicit declaration of function ‘rb_enc_alias’
+Undefined symbols for architecture x86_64:
+  "_rb_enc_alias", referenced from:
+      _t in ccHRTy3T.o
+ld: symbol(s) not found for architecture x86_64
+collect2: ld returned 1 exit status
 checked program was:
 /* begin */
-1: #include "ruby.h"
-2: 
-3: /*top*/
-4: int main(void) {return 0;}
-5: extern int t(void);
-6: int t(void) { rb_enc_alias(); return 0; }
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: int t() { rb_enc_alias(); return 0; }
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     printf("%p", &t);
+ 9:   }
+10: 
+11:   return 0;
+12: }
 /* end */
 
 --------------------
 
 have_struct_member: checking for struct pgNotify.extra in libpq-fe.h... -------------------- yes
 
-"gcc-4.2 -I/Users/spencerbard/.rbenv/versions/2.0.0-p0/include/ruby-2.0.0/x86_64-darwin12.2.1 -I/Users/spencerbard/.rbenv/versions/2.0.0-p0/include/ruby-2.0.0/ruby/backward -I/Users/spencerbard/.rbenv/versions/2.0.0-p0/include/ruby-2.0.0 -I. -I'/Users/spencerbard/.rbenv/versions/2.0.0-p0/include'  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -I/usr/include   -Wno-error=shorten-64-to-32 -pipe   -c conftest.c"
+"/usr/local/bin/gcc-4.2 -I/Users/spencerbard/.rvm/rubies/ruby-1.9.3-p448/include/ruby-1.9.1/x86_64-darwin12.4.0 -I/Users/spencerbard/.rvm/rubies/ruby-1.9.3-p448/include/ruby-1.9.1/ruby/backward -I/Users/spencerbard/.rvm/rubies/ruby-1.9.3-p448/include/ruby-1.9.1 -I. -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -I/Users/spencerbard/.rvm/opt/libyaml/include -I/Users/spencerbard/.rvm/opt/readline/include -I/Users/spencerbard/.rvm/opt/libksba/include -I/Users/spencerbard/.rvm/opt/openssl/include -I/usr/include  -O3 -ggdb -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wshorten-64-to-32 -Wimplicit-function-declaration  -fno-common -pipe   -c conftest.c"
 checked program was:
 /* begin */
-1: #include "ruby.h"
-2: 
-3: #include <libpq-fe.h>
-4: 
-5: /*top*/
-6: int main(void) {return 0;}
-7: int s = (char *)&((struct pgNotify*)0)->extra - (char *)0;
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <libpq-fe.h>
+ 4: 
+ 5: /*top*/
+ 6: int s = (char *)&((struct pgNotify*)0)->extra - (char *)0;
+ 7: int main(int argc, char **argv)
+ 8: {
+ 9:   if (argc > 1000000) {
+10:     printf("%p", &s);
+11:   }
+12: 
+13:   return 0;
+14: }
 /* end */
 
 --------------------
 
 have_header: checking for unistd.h... -------------------- yes
 
-"gcc-4.2 -E -I/Users/spencerbard/.rbenv/versions/2.0.0-p0/include/ruby-2.0.0/x86_64-darwin12.2.1 -I/Users/spencerbard/.rbenv/versions/2.0.0-p0/include/ruby-2.0.0/ruby/backward -I/Users/spencerbard/.rbenv/versions/2.0.0-p0/include/ruby-2.0.0 -I. -I'/Users/spencerbard/.rbenv/versions/2.0.0-p0/include'  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -I/usr/include   -Wno-error=shorten-64-to-32 -pipe  conftest.c -o conftest.i"
+"/usr/local/bin/gcc-4.2 -E -I/Users/spencerbard/.rvm/rubies/ruby-1.9.3-p448/include/ruby-1.9.1/x86_64-darwin12.4.0 -I/Users/spencerbard/.rvm/rubies/ruby-1.9.3-p448/include/ruby-1.9.1/ruby/backward -I/Users/spencerbard/.rvm/rubies/ruby-1.9.3-p448/include/ruby-1.9.1 -I. -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -I/Users/spencerbard/.rvm/opt/libyaml/include -I/Users/spencerbard/.rvm/opt/readline/include -I/Users/spencerbard/.rvm/opt/libksba/include -I/Users/spencerbard/.rvm/opt/openssl/include -I/usr/include  -O3 -ggdb -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wshorten-64-to-32 -Wimplicit-function-declaration  -fno-common -pipe  conftest.c -o conftest.i"
 checked program was:
 /* begin */
 1: #include "ruby.h"
@@ -441,7 +630,7 @@ checked program was:
 
 have_header: checking for ruby/st.h... -------------------- yes
 
-"gcc-4.2 -E -I/Users/spencerbard/.rbenv/versions/2.0.0-p0/include/ruby-2.0.0/x86_64-darwin12.2.1 -I/Users/spencerbard/.rbenv/versions/2.0.0-p0/include/ruby-2.0.0/ruby/backward -I/Users/spencerbard/.rbenv/versions/2.0.0-p0/include/ruby-2.0.0 -I. -I'/Users/spencerbard/.rbenv/versions/2.0.0-p0/include'  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -I/usr/include   -Wno-error=shorten-64-to-32 -pipe  conftest.c -o conftest.i"
+"/usr/local/bin/gcc-4.2 -E -I/Users/spencerbard/.rvm/rubies/ruby-1.9.3-p448/include/ruby-1.9.1/x86_64-darwin12.4.0 -I/Users/spencerbard/.rvm/rubies/ruby-1.9.3-p448/include/ruby-1.9.1/ruby/backward -I/Users/spencerbard/.rvm/rubies/ruby-1.9.3-p448/include/ruby-1.9.1 -I. -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -I/Users/spencerbard/.rvm/opt/libyaml/include -I/Users/spencerbard/.rvm/opt/readline/include -I/Users/spencerbard/.rvm/opt/libksba/include -I/Users/spencerbard/.rvm/opt/openssl/include -I/usr/include  -O3 -ggdb -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wshorten-64-to-32 -Wimplicit-function-declaration  -fno-common -pipe  conftest.c -o conftest.i"
 checked program was:
 /* begin */
 1: #include "ruby.h"
@@ -466,12 +655,11 @@ extconf.h is:
 11: #define HAVE_PG_ENCODING_TO_CHAR 1
 12: #define HAVE_PQSETCLIENTENCODING 1
 13: #define HAVE_RB_ENCDB_ALIAS 1
-14: #define HAVE_RB_ENC_ALIAS 1
-15: #define HAVE_STRUCT_PGNOTIFY_EXTRA 1
-16: #define HAVE_ST_EXTRA 1
-17: #define HAVE_ST_NOTIFY_EXTRA 1
-18: #define HAVE_UNISTD_H 1
-19: #define HAVE_RUBY_ST_H 1
-20: #endif
+14: #define HAVE_STRUCT_PGNOTIFY_EXTRA 1
+15: #define HAVE_ST_EXTRA 1
+16: #define HAVE_ST_NOTIFY_EXTRA 1
+17: #define HAVE_UNISTD_H 1
+18: #define HAVE_RUBY_ST_H 1
+19: #endif
 /* end */
 

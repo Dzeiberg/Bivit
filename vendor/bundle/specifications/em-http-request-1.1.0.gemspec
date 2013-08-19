@@ -12,7 +12,7 @@ Gem::Specification.new do |s|
   s.homepage = "http://github.com/igrigorik/em-http-request"
   s.require_paths = ["lib"]
   s.rubyforge_project = "em-http-request"
-  s.rubygems_version = "2.0.0"
+  s.rubygems_version = "2.0.7"
   s.summary = "EventMachine based, async HTTP Request client"
 
   if s.respond_to? :specification_version then

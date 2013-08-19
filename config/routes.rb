@@ -6,8 +6,11 @@ RsgLinkedinGem::Application.routes.draw do
   Faye::WebSocket.load_adapter('thin')
   # mount Faye::RackAdapter.new(:timeout => 25), at: '/faye'
   mount Faye::RackAdapter.new(:mount => '/faye', :timeout => 25) => '/mad_chatter'
-  devise_for :users
-  resources :linkedin
+devise_for :users
+  match '/users/:id/following', :to => 'users#following'   
+  match '/users/:id/followers', :to => 'users#followers'   
+
+resources :linkedin
   match '/linkedin_profile' => "linkedin#linkedin_profile"
   match '/oauth_account' => "linkedin#oauth_account"
   match '/linkedin_oauth_url' => 'linkedin#generate_linkedin_oauth_url'
@@ -18,11 +21,6 @@ resources :rooms do
 
  root to: "static_pages#home"
 
-  resources :users do
-    member do
-      get :following, :followers
-    end
-  end
 
   match '/home', to: "static_pages#home"
 

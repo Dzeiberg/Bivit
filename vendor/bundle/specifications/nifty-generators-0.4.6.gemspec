@@ -12,7 +12,7 @@ Gem::Specification.new do |s|
   s.homepage = "http://github.com/ryanb/nifty-generators"
   s.require_paths = ["lib"]
   s.rubyforge_project = "nifty-generators"
-  s.rubygems_version = "2.0.0"
+  s.rubygems_version = "2.0.7"
   s.summary = "A collection of useful Rails generator scripts."
 
   if s.respond_to? :specification_version then

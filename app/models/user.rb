@@ -7,7 +7,7 @@ class User < ActiveRecord::Base
 
   # Setup accessible (or protected) attributes for your model
 require 'bcrypt'
- attr_accessible :first_name, :last_name, :username, :email, :password, :password_confirmation, :remember_me, :rooms
+ attr_accessible :first_name, :last_name, :username, :email, :password, :password_confirmation, :remember_me, :rooms, :user_id
   validates :username, presence: true, uniqueness: true
   validates :password, presence: true, confirmation: true
   has_many :rooms, through: :memberships
@@ -38,7 +38,7 @@ require 'bcrypt'
   end
 
   def unfollow!(other_user)
-	relationships.find_by_followed_id(other_user.id).destroy
+	relationships.find_by(followed_id: other_user.id).destroy
   end
 
   def following

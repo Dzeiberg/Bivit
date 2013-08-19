@@ -1,8 +1,0 @@
-*.gem
-.bundle
-pkg/*
-.daemon
-coverage/
-.project
-Gemfile.lock
-
