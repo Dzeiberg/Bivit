@@ -1,0 +1,2 @@
+$("#add_form").html("<%= escape_javascript(render('rooms/add')) %>")
+$("#members").html('<%= @user.rooms.count %>')
