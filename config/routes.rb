@@ -7,8 +7,7 @@ RsgLinkedinGem::Application.routes.draw do
   # mount Faye::RackAdapter.new(:timeout => 25), at: '/faye'
   mount Faye::RackAdapter.new(:mount => '/faye', :timeout => 25) => '/mad_chatter'
 devise_for :users
-  match '/users/:id/following', :to => 'users#following'   
-  match '/users/:id/followers', :to => 'users#followers'   
+    
 
 resources :linkedin
   match '/linkedin_profile' => "linkedin#linkedin_profile"
@@ -52,6 +51,11 @@ resources :rooms do
     resources :rooms
   end
 
+  resources :users do
+    member do
+      get :following, :followers
+    end
+  end
 
   resources :rooms
 
@@ -65,5 +69,5 @@ resources :rooms do
   
   resources :sessions, only: [:new, :create, :destroy]
 
-  resources :relationships, only: [:create, :destroy]
+  resources :relationships, only: [:create, :destroy, :show]
 end
