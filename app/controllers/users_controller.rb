@@ -168,7 +168,7 @@ end
   end
 
 	def show
-	  @user = User.find(params[:id])
+	  @user = User.find_by_id(params[:id])
 	  @articles = @user.articles.paginate(page: params[:page])
 	  @client = get_client
 	  if !@client.nil?

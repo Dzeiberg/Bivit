@@ -10,8 +10,6 @@
       end
     end
   
-    # GET /rooms/1
-    # GET /rooms/1.json
     def show
       @room = Room.find(params[:id])
       @messages = @room.messages.last(20)

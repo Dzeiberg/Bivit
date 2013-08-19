@@ -1,53 +1,42 @@
-<% provide(:title, 'Article') %>
-<p>
-  <strong>User ID:</strong>
-  <%= @article.user_id %>
-</p>
-
-<p>
-  <strong>Headline:</strong>
-  <%= @article.headline %>
-</p>
- 
-<p>
-  <strong>Content/Link:</strong>
-  <%= @article.content %>
-</p>
-
-<p>
-  <strong>Takeaway:</strong>
+<section id="popup" class="add">
+<div class="cf"></div>
+  <section id="write" class="left">
+	<header class="right top-round"><%= @article.headline %></header>
+	<div class="cf"></div>
+	<aside>
+		<%= @article.content %>
+	</aside>
+	<div class="cf"></div>
+	 <header class="right top-round">Takeaway:</header>
+  	 <aside>
   <%= @article.takeaway %>
-</p>
+ </aside>
+ </section>
 
-<p>
-  <strong>Tags:</strong>
-  <%= @article.tags %>
-</p>
- 
-<h2>Takeaways</h2>
-<% @article.comments.each do |comment| %>
-  <% @user = User.find_by_id(comment.user_id) %>
-  Takeaway
+<div class="cf"></div>
+		<section class="feed">
+			<aside class="entry">
+			<% @article.comments.each do |comment| %>
+ 			 <% @user = User.find_by_id(comment.user_id) %>
+				<span class="content">
+
+
   <p>
     <strong>User:</strong>
-    <%= @user.email %>
+    <%= @user.first_name %>
   </p>
   <p>
     <strong>Takeaway:</strong>
     <%= comment.body %>
   </p>
 <% end %>
- 
-<h2>Add a takeaway:</h2>
+</span>
+<section id ="post" class="left">
+<div class ="cf"</div>
 <%= form_for([@article, @article.comments.build]) do |f| %>
 
-  <p>
-    <%= f.label :body %><br />
-    <%= f.text_area :body %>
-  </p>
-  <p>
-    <%= f.submit %>
-  </p>
+<%= f.text_area :body, size: "20x5" %>
+    <%= f.submit "Create Takeaway" %>
 <% end %>
  
 <%= link_to 'Edit Post', edit_article_path(@article) %> |

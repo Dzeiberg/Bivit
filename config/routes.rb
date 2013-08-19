@@ -27,8 +27,6 @@ resources :rooms do
 	
   get '/auth/:provider/callback', to: 'sessions#create'
 
-  match '/help', to: "static_pages#help"
-
   match '/room', to: "rooms#index"
 
   match '/about', to: "static_pages#about"

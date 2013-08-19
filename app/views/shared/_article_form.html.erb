@@ -1,13 +1,5 @@
-<script type="text/javascript">
-$(document).ready(function(){
-  $("#popup .add").hide();
-  console.log("HIDDEN");
-});
-</script>
-
 
 <section id="popup" class="add">
-  <button class="close">[X]</button>
 <%= form_for(@article) do |g| %>
   <div class="cf"></div>
   <%= render 'shared/error_messages', object: g.object %>
@@ -26,7 +18,8 @@ $(document).ready(function(){
     <%= g.text_area :takeaway, placeholder: "Add takeaway…" %>
     <header class="right top-round">Write a Takeaway</header>
     <%= g.text_area :tags, placeholder: "Add tags (seperated by space)..." %>
-    <%= g.submit "Post", class: "btn-blue round medium right" %>
+    <%= g.submit "Post", class: "medium btn-purple round left" %>
+
   </section>
 <% end %>
 </section>

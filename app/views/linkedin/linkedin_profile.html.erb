@@ -85,33 +85,10 @@
 		<section class="biv">
 			<header>Bivs</header>
 			<section class="feed">
-			
-			<% if current_user = rooms.owner.any? %>
-			<% @rooms.each do |r| %>
+				<% @rooms.each do |r| %>
 				<aside class="entry">
-				<%=  %>
-				</aside>
-				<aside class="entry">
-					Biv Title
-				</aside>
-				<aside class="entry">
-					Biv Title
-				</aside>
-				<aside class="entry">
-					Biv Title
-				</aside>
-				<aside class="entry">
-					Biv Title
-				</aside>
-				<aside class="entry">
-					Biv Title
-				</aside>
-				<aside class="entry">
-					Biv Title
-				</aside>
-				<aside class="entry">
-					Biv Title
-				</aside>					
+				<%= @room.name %>
+				</aside>				
 			
 			</section>
 		</section>

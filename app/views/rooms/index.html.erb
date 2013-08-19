@@ -1,19 +1,21 @@
-<div><%= link_to 'BivIt!', new_room_path, class: 'btn pull-right' %>
-<h1>Bivs</h1>
-</div>
+<div id="users">
+    <div class="block">
+      <section id="top" class="row left">
 
-<table class="table table-striped">
-<% @rooms.each do |room| %>
-  <tr>
-    <td><h4><%= link_to room.name, room %></h4></td>
-    <!--
-    <td><%= link_to 'Show', room %></td>
-    <td><%= link_to 'Edit', edit_room_path(room) %></td>
-    <td><%= link_to 'Destroy', room, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-    -->
-  </tr>
-<% end %>
-</table>
+        <section id="current" class="col6">
 
-<br />
+          <h3 class="left">All Bivs</h3>
+        </section>
 
+      </section>
+      <div class="cf"></div>
+      <section id="info">
+        <section class="feed">
+            <%= render @rooms %>      
+        </section>
+        
+      </section>
+    </div>
+  </div>
+
+<%= link_to 'BivIt!', new_room_path, class: 'btn pull-right' %>

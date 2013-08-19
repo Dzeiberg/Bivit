@@ -1,37 +1,115 @@
-<div id="room">
-<div class="span3">
+<div id="biv">
+
+<div class="block">
+
+	<!-- BEGIN #biv #top  -->
+	<section id="top" class="left">
+
+		<header>
+			<%= @room.name %>
+		</header>
+
+	</section>
 <div class="members">
-  <% @messages.each do |message| %>
-    <p class="message">
-    <h3>Members</h3>
-      <li><%= message.author.username %></li>
-    </p>
-  <% end %>
-</div>
-</div>
-<div class= "span9">
-<h1 class="name"><%= @room.name %></h1>
-<div class="messages">
-  <p id="previous_messages"><%= link_to '^ Show Previous Messages ^', '#' %></p>
-  <% @messages.each do |message| %>
-    <p class="message">
-      <time><%= message.created_at %></time>
-      <span class="author"><%= message.author.username %>:</span>
-      <span class="html"><%= message.html %></span>
-    </p>
-  <% end %>
-</div>
+<div class="cf"></div>
+<section id="files" class="left">
+	
+		<header>Files</header>
+		
+		<section class="feed">
+		
+			<!-- single entry -->
+			<aside class="file">
+				<span class="filename">File Name</span>
+				<span class="filetype">File Type</span>
+				<img src="http://placehold.it/50x50">
+				<div class="cf"></div>
+			</aside>
+			<aside class="file">
+				<span class="filename">File Name</span>
+				<span class="filetype">File Type</span>
+				<img src="http://placehold.it/50x50">
+				<div class="cf"></div>
+			</aside>
+			<aside class="file">
+				<span class="filename">File Name</span>
+				<span class="filetype">File Type</span>
+				<img src="http://placehold.it/50x50">
+				<div class="cf"></div>
+			</aside>
+			<aside class="file">
+				<span class="filename">File Name</span>
+				<span class="filetype">File Type</span>
+				<img src="http://placehold.it/50x50">
+				<div class="cf"></div>
+			</aside>
+			<aside class="file">
+				<span class="filename">File Name</span>
+				<span class="filetype">File Type</span>
+				<img src="http://placehold.it/50x50">
+				<div class="cf"></div>
+			</aside>
+			<aside class="file">
+				<span class="filename">File Name</span>
+				<span class="filetype">File Type</span>
+				<img src="http://placehold.it/50x50">
+				<div class="cf"></div>
+			</aside>
+			<aside class="file">
+				<span class="filename">File Name</span>
+				<span class="filetype">File Type</span>
+				<img src="http://placehold.it/50x50">
+				<div class="cf"></div>
+			</aside>			
+			
+		</section>
+		
+	</section>
 
-
-<%= form_for [@room, @room.messages.build], id: 'new_message', html: { class: 'form-search' } do |f| %>
+	<section id="post" class="left">
+	<section class="feed">
+	<% @messages.each do |message| %>
+	<aside><h3><%= message.created_at %> <%= message.author.first_name %>: <%= message.html %></aside></h3>
+	<%end%>
+  <aside><h3><%= link_to 'Show Previous Messages', '#' %></aside></h3>
+  </section>
+  <section class="create">
+					
+			<aside class="insert">
+				<%= form_for [@room, @room.messages.build], id: 'new_message', html: { class: 'form-search' } do |f| %>
   <div class="row-fluid">
-    <%= f.text_field :text, class: 'span9' %>
-    <%= f.submit 'Send', class: 'btn' %>
+    <%= f.text_field :text, class: 'textarea' %>
+				<button class="btn-blue medium right"><%= f.submit 'Send Message', class: 'btn' %> </button>
+<%end%>				
+			</aside>
+			
+		</section>
 
-<!--     <div class="btn-group dropup">
-      <%= f.submit 'Send Message', class: 'btn' %>
-    </div> -->
-<% end %>
+	</section>
+<section id="members" class="left">
+	
+		<header>Members</header>
+		
+		<section class="feed">
+		
+			
+  <% @messages.each_with_index do |message, i| %>
+  <aside class="member">
+				<img class="left" src="http://placehold.it/50x50">
+
+     <span class="name left"><%= message.author.first_name %></span>
+	<div class="cf"></div>
+			</aside>			
+		
+		</section>
+
+	</section>
+  <% end %>
+
+
+
+    </div>
+
 </div>
 	  <%= link_to "Add Users", following_user_path %>
 

@@ -9,7 +9,7 @@ class LinkedinController < ApplicationController
   }
 
   def index
-    unless LinkedinOauthSetting.find_by_user_id(params[:id]).nil?
+    unless LinkedinOauthSetting.find_by_id(params[:id]).nil?
       redirect_to "/linkedin_profile"
     end
   end
