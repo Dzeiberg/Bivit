@@ -1,6 +1,6 @@
 <style>
 #popup #feed {width: 33%; }
-
+  #popup{margin-left: 10rem;}
   #popup #feed .biv {}
     #popup #feed .biv header {background: #78036E; }  
     #popup #feed .biv .entry {background: #78036E; }
@@ -17,8 +17,6 @@
     #popup #feed section header {margin-bottom: 3px; padding: 7px; font-size: 24px; font-weight: bold; color: white; display: inline-block; border-top-right-radius: 5px; border-top-left-radius: 5px;}
 </style>
  
-<%= link_to 'Edit Post', edit_article_path(@article) %> |
-<%= link_to 'Back to Posts', articles_path %>
 
 <section id="popup" class="add">
   <div class="cf"></div>
@@ -44,10 +42,13 @@
       <%= form_for([@article, @article.comments.build]) do |f| %>
         <%= f.text_area :body %>
         <%= f.submit "Add Takeaway" %>
-    <% end %>
+      <% end %>
+      <%= link_to 'Edit Post', edit_article_path(@article) %> |
+      <%= link_to 'Back to Posts', articles_path %>
     </section>
     
   </section>
+  
   
 
 </section>
